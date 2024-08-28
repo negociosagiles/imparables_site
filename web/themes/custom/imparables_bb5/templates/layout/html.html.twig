@@ -1,0 +1,379 @@
+{#
+/**
+ * @file
+ * Theme override for the basic structure of a single Drupal page.
+ *
+ * Variables:
+ * - logged_in: A flag indicating if user is logged in.
+ * - root_path: The root path of the current page (e.g., node, admin, user).
+ * - node_type: The content type for the current node, if the page is a node.
+ * - head_title: List of text elements that make up the head_title variable.
+ *   May contain or more of the following:
+ *   - title: The title of the page.
+ *   - name: The name of the site.
+ *   - slogan: The slogan of the site.
+ * - page_top: Initial rendered markup. This should be printed before 'page'.
+ * - page: The rendered page markup.
+ * - path_info.args: Array of URL arguments un aliassed.
+ * - page_bottom: Closing rendered markup. This variable should be printed after
+ *   'page'.
+ * - db_offline: A flag indicating if the database is offline.
+ * - placeholder_token: The token for generating head, css, js and js-bottom
+ *   placeholders.
+ *
+ * @see template_preprocess_html()
+ */
+#}
+{%
+  set body_classes = [
+    logged_in ? 'user-logged-in',
+    not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
+    node_type ? 'node--type-' ~ node_type|clean_class,
+    db_offline ? 'db-offline',
+  ]
+%}
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
+
+      <!-- Required Meta Tags Always Come First -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Title -->
+      <title> Imparables.tech | Concursos de programación Escolares</title>
+
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="/themes/custom/imparables_bb5/assets/favicon.ico">
+
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+      <!-- CSS Implementing Plugins -->
+      <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
+      <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+      <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/vendor/swiper/swiper-bundle.min.css">
+
+
+      <!-- CSS Front Template -->
+      <!-- <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/css/theme.min.css"> -->
+      <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/css/snippets.min.css">
+      <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/css/theme.min.css">
+      
+
+  </head>
+  <body{{ attributes.addClass(body_classes) }}>
+    <a href="#main-content" class="visually-hidden-focusable">
+      {{ 'Skip to main content'|t }}
+    </a>
+
+
+
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+
+    <!-- ========== SECONDARY CONTENTS ========== -->
+    <!-- Go To -->
+    <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;" data-hs-go-to-options='{
+       "offsetTop": 700,
+       "position": {
+         "init": {
+           "right": "2rem"
+         },
+         "show": {
+           "bottom": "2rem"
+         },
+         "hide": {
+           "bottom": "-2rem"
+         }
+       }
+     }'>
+      <i class="bi-chevron-up"></i>
+    </a>
+
+    <!-- Offcanvas Signup -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarSignup">
+      <div class="offcanvas-header justify-content-end border-0 pb-0">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <!-- Log in -->
+        <div id="loginOffcanvasFormLogin">
+          <!-- Heading -->
+          <div class="text-center mb-7">
+            <h3 class="modal-title">Inicia Sesión</h3>
+            <p>Inicia sesión para gestionar tu cuenta.</p>
+          </div>
+          <!-- End Heading -->
+
+          <form class="js-validate needs-validation" novalidate>
+            <!-- Form -->
+            <div class="mb-3">
+              <label class="form-label" for="loginOffcanvasFormLoginEmail">Tu correo</label>
+              <input type="email" class="form-control form-control-lg" name="email" id="loginOffcanvasFormLoginEmail"
+                     placeholder="correo@dominio.com" aria-label="email@site.com" required>
+              <span class="invalid-feedback">Por favor ingrese un correo válido.</span>
+            </div>
+            <!-- End Form -->
+
+            <!-- Form -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <label class="form-label" for="loginOffcanvasFormLoginPassword">Contraseña</label>
+
+                <a class="js-animation-link form-label-link" href="javascript:;" data-hs-show-animation-options='{
+                   "targetSelector": "#loginOffcanvasFormResetPassword",
+                   "groupName": "idForm"
+                 }'>¿Olvidaste tu contraseña?</a>
+              </div>
+
+              <input type="password" class="form-control form-control-lg" name="password"
+                     id="loginOffcanvasFormLoginPassword" placeholder="8+ characters required"
+                     aria-label="8+ characters required" required minlength="8">
+              <span class="invalid-feedback">Por favor ingresa una contraseña segura.</span>
+            </div>
+            <!-- End Form -->
+
+            <div class="d-grid gap-3 text-center">
+              <button type="submit" class="btn btn-primary btn-lg">Inicia Sesión</button>
+
+              <span class="divider-center">O</span>
+
+              <button type="submit" class="btn btn-ghost-secondary">
+              <span class="d-flex justify-content-center align-items-center">
+                <img class="avatar avatar-xss me-2" src="/themes/custom/imparables_bb5/assets/svg/brands/google-icon.svg" alt="Image Description">
+                Iniciar sesión con Google
+              </span>
+              </button>
+
+              <p>¿Aún no tienes una cuenta?
+                <a class="js-animation-link link" href="javascript:;" role="button" data-hs-show-animation-options='{
+                   "targetSelector": "#loginOffcanvasFormSignup",
+                   "groupName": "idForm"
+                 }'>Regístrate</a>
+              </p>
+            </div>
+          </form>
+        </div>
+        <!-- End Log in -->
+
+        <!-- Log in -->
+        <div id="loginOffcanvasFormSignup" style="display: none; opacity: 0;">
+          <!-- Heading -->
+          <div class="text-center mb-7">
+            <h3 class="modal-title">Registro</h3>
+            <p>Completa el formulario para que puedas registrarte</p>
+          </div>
+          <!-- End Heading -->
+
+          <form class="js-validate needs-validation" novalidate>
+            <!-- Form -->
+            <div class="mb-3">
+              <label class="form-label" for="loginOffcanvasFormSignupEmail">Tu correo</label>
+              <input type="email" class="form-control form-control-lg" name="email" id="loginOffcanvasFormSignupEmail"
+                     placeholder="email@site.com" aria-label="email@site.com" required>
+              <span class="invalid-feedback">Por favor ingrese un correo válido.</span>
+            </div>
+            <!-- End Form -->
+
+            <!-- Form -->
+            <div class="mb-3">
+              <label class="form-label" for="loginOffcanvasFormSignupPassword">Contraseña</label>
+              <input type="password" class="form-control form-control-lg" name="password"
+                     id="loginOffcanvasFormSignupPassword" placeholder="8+ characters required"
+                     aria-label="8+ characters required" required>
+              <span class="invalid-feedback">Por favor ingresa una contraseña segura.</span>
+            </div>
+            <!-- End Form -->
+
+            <!-- Form -->
+            <div class="mb-3" data-hs-validation-validate-class>
+              <label class="form-label" for="loginOffcanvasFormSignupConfirmPassword">Confirm password</label>
+              <input type="password" class="form-control form-control-lg" name="confirmPassword"
+                     id="loginOffcanvasFormSignupConfirmPassword" placeholder="8+ characters required"
+                     aria-label="8+ characters required" required
+                     data-hs-validation-equal-field="#loginOffcanvasFormSignupPassword">
+              <span class="invalid-feedback">Tu contraseña no coincide con la confirmación.</span>
+            </div>
+            <!-- End Form -->
+
+            <div class="text-center mb-3">
+              <p class="small mb-0">By continuing you agree to our <a href="#">Terms and Conditions</a></p>
+            </div>
+
+            <div class="d-grid gap-3 text-center">
+              <button type="submit" class="btn btn-primary btn-lg">Sign up</button>
+
+              <span class="divider-center">OR</span>
+
+              <button type="submit" class="btn btn-ghost-secondary">
+              <span class="d-flex justify-content-center align-items-center">
+                <img class="avatar avatar-xss me-2" src="/themes/custom/imparables_bb5/assets/svg/brands/google-icon.svg" alt="Image Description">
+                Sign up with Google
+              </span>
+              </button>
+
+              <p>Already have an account?
+                <a class="js-animation-link link" href="javascript:;" role="button" data-hs-show-animation-options='{
+                   "targetSelector": "#loginOffcanvasFormLogin",
+                   "groupName": "idForm"
+                 }'>Log in</a>
+              </p>
+            </div>
+          </form>
+        </div>
+        <!-- End Log in -->
+
+        <!-- Reset Password -->
+        <div id="loginOffcanvasFormResetPassword" style="display: none; opacity: 0;">
+          <!-- Heading -->
+          <div class="text-center mb-7">
+            <h3 class="modal-title">Forgot password</h3>
+            <p>Instructions will be sent to you</p>
+          </div>
+          <!-- End Heading -->
+
+          <form class="js-validate needs-validation" novalidate>
+            <!-- Form -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <label class="form-label" for="signupModalFormResetPasswordEmail" tabindex="0">Your email</label>
+
+                <a class="js-animation-link form-label-link" href="javascript:;" data-hs-show-animation-options='{
+                     "targetSelector": "#loginOffcanvasFormLogin",
+                     "groupName": "idForm"
+                   }'>
+                  <i class="bi-chevron-left small"></i> Back to Log in
+                </a>
+              </div>
+
+              <input type="email" class="form-control form-control-lg" name="email" id="signupModalFormResetPasswordEmail"
+                     tabindex="1" placeholder="Enter your email address" aria-label="Enter your email address" required>
+              <span class="invalid-feedback">Please enter a valid email address.</span>
+            </div>
+            <!-- End Form -->
+
+            <div class="d-grid gap-3 text-center">
+              <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </div>
+          </form>
+        </div>
+        <!-- End Reset Password -->
+      </div>
+    </div>
+    <!-- ========== END SECONDARY CONTENTS ========== -->
+
+    <!-- JS Global Compulsory  -->
+    <!-- <script src="/themes/custom/imparables_bb5/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    <!-- JS Implementing Plugins -->
+    <script src="/themes/custom/imparables_bb5/assets/vendor/hs-header/dist/hs-header.min.js"></script>
+    <script src="/themes/custom/imparables_bb5/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js"></script>
+    <script src="/themes/custom/imparables_bb5/assets/vendor/hs-show-animation/dist/hs-show-animation.min.js"></script>
+    <script src="/themes/custom/imparables_bb5/assets/vendor/hs-go-to/dist/hs-go-to.min.js"></script>
+    <script src="/themes/custom/imparables_bb5/assets/vendor/typed.js/lib/typed.min.js"></script>
+    <script src="/themes/custom/imparables_bb5/assets/vendor/fslightbox/index.js"></script>
+    <script src="/themes/custom/imparables_bb5/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/themes/custom/imparables_bb5/assets/vendor/prism/prism.js"></script>
+    <script src="/themes/custom/imparables_bb5/assets/vendor/hs-sticky-block/dist/hs-sticky-block.min.js"></script>
+
+
+    <!-- JS Front -->
+    <script src="/themes/custom/imparables_bb5/assets/js/theme.min.js"></script>
+
+    <!-- JS Plugins Init. -->
+    <script>
+      (function() {
+        // INITIALIZATION OF GO TO
+        // =======================================================
+        new HSGoTo('.js-go-to')
+
+        // INITIALIZATION OF HEADER
+        // =======================================================
+        new HSHeader('#header').init()
+
+        // INITIALIZATION OF MEGA MENU
+        // =======================================================
+        new HSMegaMenu('.js-mega-menu', {
+          desktop: {
+            position: 'left'
+          }
+        })
+
+        // INITIALIZATION OF SHOW ANIMATIONS
+        // =======================================================
+        new HSShowAnimation('.js-animation-link')
+
+        // INITIALIZATION OF BOOTSTRAP VALIDATION
+        // =======================================================
+        HSBsValidation.init('.js-validate', {
+          onSubmit: data => {
+            data.event.preventDefault()
+            alert('Submited')
+          }
+        })
+
+        // INITIALIZATION OF BOOTSTRAP DROPDOWN
+        // =======================================================
+        HSBsDropdown.init()
+
+        // INITIALIZATION OF TEXT ANIMATION (TYPING)
+        // =======================================================
+        HSCore.components.HSTyped.init('.js-typedjs')
+
+        // INITIALIZATION OF SWIPER
+        // =======================================================
+        var swiper = new Swiper('.js-swiper-course-hero',{
+          preloaderClass: 'custom-swiper-lazy-preloader',
+          navigation: {
+            nextEl: '.js-swiper-course-hero-button-next',
+            prevEl: '.js-swiper-course-hero-button-prev',
+          },
+          slidesPerView: 1,
+          loop: 1,
+          breakpoints: {
+            380: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            580: {
+              slidesPerView: 3,
+              spaceBetween: 15,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 15,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 15,
+            },
+          },
+          on: {
+            'imagesReady': function (swiper) {
+              const preloader = swiper.el.querySelector('.js-swiper-course-hero-preloader')
+              preloader.parentNode.removeChild(preloader)
+            }
+          }
+        });
+
+        // INITIALIZATION OF STICKY BLOCKS
+        // =======================================================
+        new HSStickyBlock('.js-sticky-block', {
+          targetSelector: document.getElementById('header').classList.contains('navbar-fixed') ? '#header' : null
+        })
+
+
+      })()
+    </script>
+
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+
+  </body>
+</html>

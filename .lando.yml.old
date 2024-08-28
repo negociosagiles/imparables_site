@@ -1,0 +1,4 @@
+name: l_imparables
+recipe: drupal10
+config:
+  webroot: web

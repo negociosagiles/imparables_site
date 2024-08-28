@@ -1,0 +1,69 @@
+name: limparables
+recipe: drupal10
+config:
+  webroot: ./web
+  php: '8.2'
+  composer_version: 2.7.7
+  via: 'apache:2.4'
+  database: 'mysql:5.7'
+  phpmyadmin: '5.1'
+  drush: ^12
+  xdebug: false
+  config:
+    database: ./config/my.cnf
+    php: ./config/php.ini
+services:
+  phpmyadmin:
+    type: phpmyadmin
+    hosts:
+      - database
+  node:
+    type: node
+    globals:
+      gulp-cli: latest
+proxy:
+  phpmyadmin:
+    - phpmysql.limparables.lndo.site
+tooling:
+  npm:
+    service: node
+    cmd: npm
+    description: 'Ex: lando npm <command>'
+  gulp:
+    service: node
+    cmd: gulp
+  drush:
+    service: appserver
+    env:
+      DRUSH_OPTIONS_URI: 'http://limparables.lndo.site/'
+  'theme:subtheme':
+    service: appserver
+    description: Create a subtheme from Boostrap Barrio SASS
+    cmd:
+      - >-
+        cd /app/web/themes/contrib/bootstrap_sass && chmod +x
+        scripts/create_subtheme.sh && ./scripts/create_subtheme.sh
+  'theme:install':
+    service: node
+    description: Installs theme dependencies
+    dir: /app/web/themes/custom/imparables_bb5
+    cmd:
+      - npm install
+  'theme:build':
+    service: node
+    description: Compiles theme
+    dir: /app/web/themes/custom/imparables_bb5
+    cmd:
+      - node_modules/.bin/gulp
+  'npm:build:dev':
+    service: node
+    description: Build react timeline dev
+    dir: /app/web/modules/custom/search_react/js
+    cmd:
+      - npm run dev
+  'npm:build:prod':
+    service: node
+    description: Build react timeline prod
+    dir: /app/web/modules/custom/search_react/js
+    cmd:
+      - npm run prod
