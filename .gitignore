@@ -25,6 +25,5 @@
 /.env
 /.ddev
 /web/themes/custom/imparables_bb5/node_modules/
-/web/themes/custom/imparables_bb5/assets/vendor/
 /backups/
 /web/front-v4.3.1/
