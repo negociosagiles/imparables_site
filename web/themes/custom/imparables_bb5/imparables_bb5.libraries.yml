@@ -13,4 +13,4 @@ global-styling:
     - core/drupal  
 boostrap_js:
   js:
-    libraries/bootstrap/dist/js/bootstrap.bundle.min.js: { minified: true }
+    assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js: { minified: true }
