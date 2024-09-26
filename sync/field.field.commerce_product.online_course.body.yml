@@ -1,0 +1,24 @@
+uuid: 0ec412ef-c923-46d1-888d-80c3279a44a6
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.online_course
+    - field.storage.commerce_product.body
+  module:
+    - text
+id: commerce_product.online_course.body
+field_name: body
+entity_type: commerce_product
+bundle: online_course
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

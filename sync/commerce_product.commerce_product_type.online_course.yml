@@ -1,0 +1,14 @@
+uuid: c855ccf1-e95b-48fb-8bda-b97bd170b716
+langcode: es
+status: true
+dependencies: {  }
+id: online_course
+label: online_course
+traits: {  }
+locked: false
+description: ''
+variationType: online_course
+variationTypes:
+  - online_course
+multipleVariations: true
+injectVariationFields: true

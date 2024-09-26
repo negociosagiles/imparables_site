@@ -1,0 +1,11 @@
+uuid: 0b65961a-2754-412d-8ad0-0142d90f6520
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.edades
+id: taxonomy_term.edades
+target_entity_type_id: taxonomy_term
+target_bundle: edades
+default_langcode: site_default
+language_alterable: false

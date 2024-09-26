@@ -1,0 +1,22 @@
+uuid: 29046a4b-96ea-4615-bb80-adf20e9f71a6
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - imparables_bb5
+_core:
+  default_config_hash: znEZcwCZgbmzCpMqS8hVxhXA9XqofP36qkEj79OyeVE
+id: imparables_bb5_content
+theme: imparables_bb5
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  label_display: '0'
+  provider: system
+visibility: {  }

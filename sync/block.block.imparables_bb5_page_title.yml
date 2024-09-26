@@ -1,0 +1,29 @@
+uuid: 82a5f616-e33d-4764-8588-2cfdb052e175
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+  theme:
+    - imparables_bb5
+_core:
+  default_config_hash: vwPWmdnQDg3QN_dX6pActLtIez9Y67Pmn4yaki70VeY
+id: imparables_bb5_page_title
+theme: imparables_bb5
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  label_display: '0'
+  provider: core
+visibility:
+  'entity_bundle:commerce_product':
+    id: 'entity_bundle:commerce_product'
+    negate: true
+    context_mapping:
+      commerce_product: '@commerce_product.product_route_context:commerce_product'
+    bundles:
+      online_course: online_course

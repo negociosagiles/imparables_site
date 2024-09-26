@@ -1,0 +1,11 @@
+uuid: bff54a31-12a0-4cde-8610-776dac4accda
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.book
+id: commerce_product.book
+target_entity_type_id: commerce_product
+target_bundle: book
+default_langcode: site_default
+language_alterable: false

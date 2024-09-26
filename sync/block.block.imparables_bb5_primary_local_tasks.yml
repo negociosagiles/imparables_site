@@ -1,0 +1,22 @@
+uuid: 8c7dfea1-bb58-449c-9451-45dfa487c954
+langcode: es
+status: true
+dependencies:
+  theme:
+    - imparables_bb5
+_core:
+  default_config_hash: vdEehiuosuyXR7P0CflD6lg1hUp22miBTU3JEkp7yko
+id: imparables_bb5_primary_local_tasks
+theme: imparables_bb5
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Solapas principales'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

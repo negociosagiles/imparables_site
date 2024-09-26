@@ -1,0 +1,11 @@
+uuid: 1ab299a5-b556-4006-83d6-6b19abc1775c
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.programas
+id: taxonomy_term.programas
+target_entity_type_id: taxonomy_term
+target_bundle: programas
+default_langcode: site_default
+language_alterable: false

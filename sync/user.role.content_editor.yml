@@ -1,0 +1,46 @@
+uuid: f01143dc-96b8-422a-a597-76176b51593b
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.page
+    - taxonomy.vocabulary.tags
+  module:
+    - comment
+    - commerce_product
+    - contextual
+    - file
+    - node
+    - path
+    - taxonomy
+_core:
+  default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
+id: content_editor
+label: 'Editor de contenido'
+weight: 2
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'administer url aliases'
+  - 'create article content'
+  - 'create online_course commerce_product'
+  - 'create page content'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'delete article revisions'
+  - 'delete own article content'
+  - 'delete own files'
+  - 'delete own online_course commerce_product'
+  - 'delete own page content'
+  - 'delete page revisions'
+  - 'edit own article content'
+  - 'edit own comments'
+  - 'edit own page content'
+  - 'edit terms in tags'
+  - 'manage online_course commerce_product_variation'
+  - 'revert all revisions'
+  - 'view all revisions'
+  - 'view own unpublished content'

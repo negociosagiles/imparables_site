@@ -1,0 +1,9 @@
+uuid: 26e2a804-3ecf-40a2-a8e5-4c441195c19b
+langcode: es
+status: true
+dependencies: {  }
+id: imparables
+label: Imparables
+traits: {  }
+locked: false
+description: ''

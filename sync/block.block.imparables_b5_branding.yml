@@ -1,0 +1,25 @@
+uuid: c347947f-6661-4259-a6ec-29f2b0629530
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - imparables_b5
+_core:
+  default_config_hash: Sm_fgmbpemC9ZfgbLjYhkCuxPzmqFoFUWBCYpuxlUA0
+id: imparables_b5_branding
+theme: imparables_b5
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marca del sitio'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: e26632c9-a213-40d8-8605-356492bd862d
+langcode: es
+status: false
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - imparables_bb5
+_core:
+  default_config_hash: xDojQouBdC4zNHtw_tsnxJ8dsLJYUC_z-7kNX2yEYN8
+id: imparables_bb5_account_menu
+theme: imparables_bb5
+region: secondary_menu
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Menú de cuenta de usuario'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

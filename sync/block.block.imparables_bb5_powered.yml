@@ -1,0 +1,22 @@
+uuid: a549f4ed-5f20-4b38-ba59-282f02c55208
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - imparables_bb5
+_core:
+  default_config_hash: n7SBQ6rx6SAoqEj6R7QYMDTb4fUW2rn5nGst7dHXZgw
+id: imparables_bb5_powered
+theme: imparables_bb5
+region: footer_fifth
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Funciona con Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

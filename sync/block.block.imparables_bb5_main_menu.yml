@@ -1,0 +1,27 @@
+uuid: 945db76b-ea87-4a0b-8fd9-2205365797da
+langcode: es
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - imparables_bb5
+_core:
+  default_config_hash: RmlOpb797i_UcUPk9-2hXiMABCbkyeuqakyN3EGITTY
+id: imparables_bb5_main_menu
+theme: imparables_bb5
+region: primary_menu
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navegación principal'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

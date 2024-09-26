@@ -1,0 +1,22 @@
+uuid: 59c3851a-45a6-4470-853c-1447976740b6
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - imparables_b5
+_core:
+  default_config_hash: EOWQYsuqdgDzEDbu-F3psU7aSALj1_BM450pfnZ5RB0
+id: imparables_b5_messages
+theme: imparables_b5
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Mensajes
+  label_display: '0'
+  provider: system
+visibility: {  }

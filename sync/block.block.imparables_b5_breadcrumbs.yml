@@ -1,0 +1,22 @@
+uuid: f6639e11-9426-43ff-9c60-95f196d8bea3
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - imparables_b5
+_core:
+  default_config_hash: HrfHqFeweByNCzM8zpGdKQd6FUABJh1a9-3W287dhsk
+id: imparables_b5_breadcrumbs
+theme: imparables_b5
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Enlaces de ayuda a la navegación'
+  label_display: '0'
+  provider: system
+visibility: {  }

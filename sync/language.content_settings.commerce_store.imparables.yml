@@ -1,0 +1,11 @@
+uuid: 4ef15c33-ae08-42c9-b5be-50f58914c11d
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_store.commerce_store_type.imparables
+id: commerce_store.imparables
+target_entity_type_id: commerce_store
+target_bundle: imparables
+default_langcode: site_default
+language_alterable: false

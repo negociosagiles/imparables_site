@@ -1,0 +1,34 @@
+uuid: 7ee1bb73-4cd9-47bb-9382-3fb0aa0ff3b8
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.online_course
+    - field.storage.commerce_product.field_course_content
+    - paragraphs.paragraphs_type.course_block
+  module:
+    - entity_reference_revisions
+id: commerce_product.online_course.field_course_content
+field_name: field_course_content
+entity_type: commerce_product
+bundle: online_course
+label: 'Contenido del curso'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      course_block: course_block
+    negate: 0
+    target_bundles_drag_drop:
+      course_block:
+        weight: 3
+        enabled: true
+      course_content:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

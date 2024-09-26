@@ -1,0 +1,10 @@
+uuid: 5d2bd102-54c9-4893-94b9-7be556a5303a
+langcode: es
+status: true
+dependencies: {  }
+id: course_block
+label: 'Course block'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

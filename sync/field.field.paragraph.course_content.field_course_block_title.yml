@@ -1,0 +1,19 @@
+uuid: b1dc3b3f-ba9c-4b8c-9988-edbe9ba0613c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_course_block_title
+    - paragraphs.paragraphs_type.course_content
+id: paragraph.course_content.field_course_block_title
+field_name: field_course_block_title
+entity_type: paragraph
+bundle: course_content
+label: course_block_title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

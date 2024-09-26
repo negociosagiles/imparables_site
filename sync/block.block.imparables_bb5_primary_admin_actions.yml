@@ -1,0 +1,20 @@
+uuid: b057e85c-a0ab-4468-a85b-62416cd15495
+langcode: es
+status: true
+dependencies:
+  theme:
+    - imparables_bb5
+_core:
+  default_config_hash: JqIPKTa1n5I15qjBeJ9XGe9lzv12luJ12MgWAtysSa4
+id: imparables_bb5_primary_admin_actions
+theme: imparables_bb5
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de administración'
+  label_display: '0'
+  provider: core
+visibility: {  }

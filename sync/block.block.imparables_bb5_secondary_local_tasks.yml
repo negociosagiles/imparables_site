@@ -1,0 +1,22 @@
+uuid: 810800b3-1dd9-4425-896a-a2e555d6e923
+langcode: es
+status: true
+dependencies:
+  theme:
+    - imparables_bb5
+_core:
+  default_config_hash: htVHWHnO_48K62LwWvJVoVJR47cRwyr3jEQUm4e33YA
+id: imparables_bb5_secondary_local_tasks
+theme: imparables_bb5
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Solapas secundarias'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

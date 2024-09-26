@@ -1,0 +1,11 @@
+uuid: 6158bdd3-dd96-48f8-adba-0768b3b4c029
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.online_course
+id: commerce_product.online_course
+target_entity_type_id: commerce_product
+target_bundle: online_course
+default_langcode: site_default
+language_alterable: false

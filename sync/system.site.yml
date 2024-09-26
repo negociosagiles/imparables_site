@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: es
+uuid: 33ae3992-632d-4591-bb04-f93362318b13
+name: 'Radient Tech School'
+mail: danny.montalvo@gmail.com
+slogan: 'Concursos de programación Escolares'
+page:
+  403: ''
+  404: ''
+  front: /node/2
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: es
+mail_notification: ''

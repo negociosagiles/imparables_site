@@ -1,0 +1,22 @@
+uuid: bd2c6a10-17a9-4c7e-8a41-89628e1bf063
+langcode: es
+status: true
+dependencies:
+  theme:
+    - imparables_b5
+_core:
+  default_config_hash: LTzfprUyKylmNqOXD2d1voYVjcU0RmpR7Jd8hRwz__U
+id: imparables_b5_local_tasks
+theme: imparables_b5
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Pestañas
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

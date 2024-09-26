@@ -1,0 +1,19 @@
+uuid: ae5812fb-0ba3-4966-91c8-db43b7bf4f41
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_course_block_description
+field_name: field_course_block_description
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

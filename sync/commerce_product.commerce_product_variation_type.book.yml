@@ -1,0 +1,10 @@
+uuid: d7a52f85-9619-4be5-8ba5-8500a816751d
+langcode: es
+status: true
+dependencies: {  }
+id: book
+label: book
+traits: {  }
+locked: false
+orderItemType: default
+generateTitle: null

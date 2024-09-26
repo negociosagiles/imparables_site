@@ -1,0 +1,14 @@
+uuid: a7604194-c28d-4bab-945f-c650c2299d94
+langcode: es
+status: true
+dependencies: {  }
+id: book
+label: book
+traits: {  }
+locked: false
+description: ''
+variationType: book
+variationTypes:
+  - book
+multipleVariations: true
+injectVariationFields: true

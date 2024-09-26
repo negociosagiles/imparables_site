@@ -1,0 +1,20 @@
+uuid: 10863a5d-cdfa-4ca8-b34e-6d0bf30a3c69
+langcode: es
+status: true
+dependencies:
+  theme:
+    - imparables_b5
+_core:
+  default_config_hash: sa-Ghf-Lzv9KsVRq68vIUIMtU1BQ2dpR_3jqgHqvC3A
+id: imparables_b5_page_title
+theme: imparables_b5
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  label_display: '0'
+  provider: core
+visibility: {  }

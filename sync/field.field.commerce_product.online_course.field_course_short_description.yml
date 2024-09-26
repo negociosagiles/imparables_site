@@ -1,0 +1,19 @@
+uuid: 7f14268b-680d-4a92-bb6c-99dfeacd9d2e
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.online_course
+    - field.storage.commerce_product.field_course_short_description
+id: commerce_product.online_course.field_course_short_description
+field_name: field_course_short_description
+entity_type: commerce_product
+bundle: online_course
+label: course_short_description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

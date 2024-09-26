@@ -1,0 +1,74 @@
+uuid: 4460dc0b-c21a-4500-9cd5-acb4fa6b46b3
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.online_course
+    - field.field.commerce_product.online_course.body
+    - field.field.commerce_product.online_course.field_course_contenido
+    - field.field.commerce_product.online_course.field_course_content
+    - field.field.commerce_product.online_course.field_course_description
+    - field.field.commerce_product.online_course.field_course_objectives
+    - field.field.commerce_product.online_course.field_course_objetivos
+    - field.field.commerce_product.online_course.field_course_short_description
+  module:
+    - commerce_product
+    - text
+id: commerce_product.online_course.default
+targetEntityType: commerce_product
+bundle: online_course
+mode: default
+content:
+  field_course_contenido:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_course_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_course_objetivos:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_course_short_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  body: true
+  created: true
+  field_course_content: true
+  field_course_objectives: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  uid: true

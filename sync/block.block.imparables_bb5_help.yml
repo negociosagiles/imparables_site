@@ -1,0 +1,22 @@
+uuid: 37de9c60-3c97-467f-b6a0-3146dc08f70c
+langcode: es
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - imparables_bb5
+_core:
+  default_config_hash: yXl5dg9lUr64w9RzKg1jcWrSlRv1qPnjVi0f8I0LixA
+id: imparables_bb5_help
+theme: imparables_bb5
+region: highlighted
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,0 +1,31 @@
+uuid: 5599fcc6-45cb-4e42-acef-f3b3f6d95306
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.course_block.field_course_block_description
+    - field.field.paragraph.course_block.field_course_block_title
+    - paragraphs.paragraphs_type.course_block
+  module:
+    - text
+id: paragraph.course_block.default
+targetEntityType: paragraph
+bundle: course_block
+mode: default
+content:
+  field_course_block_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_course_block_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }
