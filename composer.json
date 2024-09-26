@@ -26,17 +26,19 @@
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
+        "drupal/genpass": "^2.0",
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/paragraphs": "^1.17",
         "drupal/remove_username": "^1.5",
         "drupal/search_api": "^1.35",
         "drupal/user_registrationpassword": "^2.0",
+        "drupal/username": "^1.0@alpha",
         "drupal/whatsapp": "^1.0"
     },
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {
