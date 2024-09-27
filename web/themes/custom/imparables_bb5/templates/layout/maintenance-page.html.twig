@@ -33,12 +33,76 @@
     <div id="main-wrapper">
       <div id="main" class="clearfix">
         <main id="content" class="column" role="main">
+
+            <!-- Content -->
+            <div class="d-md-flex">
+              <div class="container align-items-md-center content-space-t-2 ">
+                <div class="row justify-content-md-between align-items-md-center ">
+                  <div class="col-9 col-md-5 mb-5 mb-md-0">
+                    <img class="img-fluid" src="/themes/custom/imparables_bb5/assets/svg/illustrations/oc-yelling.svg" alt="SVG Illustration">
+                  </div>
+                  <!-- End Col -->
+
+                  <div class="col-md-6">
+                    <!-- Heading -->
+                    <div class="mb-4">
+                      <h1>Pronto estaremos de regreso.</h1>
+                      <p>{{ page.content }}</p>
+                    </div>
+                    <!-- End Heading -->
+
+                    <div class="js-countdown row mb-5">
+                      <div class="col-3">
+                        <h2 class="js-cd-days h1 text-primary mb-0"></h2>
+                        <h5 class="mb-0">Días</h5>
+                      </div>
+                      <!-- End Col -->
+
+                      <div class="col-3">
+                        <h2 class="js-cd-hours h1 text-primary mb-0"></h2>
+                        <h5 class="mb-0">Horas</h5>
+                      </div>
+                      <!-- End Col -->
+
+                      <div class="col-3">
+                        <h2 class="js-cd-minutes h1 text-primary mb-0"></h2>
+                        <h5 class="mb-0">Minutos</h5>
+                      </div>
+                      <!-- End Col -->
+
+                      <div class="col-3">
+                        <h2 class="js-cd-seconds h1 text-primary mb-0"></h2>
+                        <h5 class="mb-0">Segundos</h5>
+                      </div>
+                      <!-- End Col -->
+                    </div>
+                    <!-- End Row -->
+
+                    <form>
+                      <!-- Input Card -->
+                      <div class="input-card input-card-sm border">
+                        <div class="input-card-form">
+                          <label for="subscribeForm" class="form-label visually-hidden">Tu correo</label>
+                          <input type="text" class="form-control form-control-lg" id="subscribeForm" placeholder="Enter email" aria-label="Enter email">
+                        </div>
+                        <button type="button" class="btn btn-primary btn-lg">Suscríbete</button>
+                      </div>
+                      <!-- End Input Card -->
+                    </form>
+                  </div>
+                  <!-- End Col -->
+                </div>
+                <!-- End Row -->
+              </div>
+            </div>
+            <!-- End Content -->
+
           <section class="section">
             <a href="#main-content" id="main-content"></a>
             {% if title %}
-              <h1 class="title" id="page-title">{{ title }}</h1>
+              <h1 class="title" id="page-title"><!-- {{ title }} --></h1>
             {% endif %}
-            {{ page.content }}
+
             {{ page.highlighted }}
           </section>
         </main>
