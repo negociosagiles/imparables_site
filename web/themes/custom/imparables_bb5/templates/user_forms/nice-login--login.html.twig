@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the user login form.
+ *
+ * Available variables:
+ * - name : the input name
+ * - pass : the input password
+ * - actions : the submit buttons
+ * - reset_password_link: the reset password link.
+ * - register_link: the reset password link.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<!-- Form -->
+<div class="container content-space-2 content-space-lg-3">
+  <div class="flex-grow-1 mx-auto" style="max-width: 28rem;">
+    <!-- Heading -->
+    <div class="text-center mb-5 mb-md-7">
+      <h1 class="h2">Welcome back</h1>
+      <p>Login to manage your account.</p>
+    </div>
+    <!-- End Heading -->
+
+    {{ form.name }}
+
+
+    <div class="nice-login__login__pass">
+      {{ form.pass }}
+      {{ form.reset_password_link }}
+    </div>
+
+    <div class="nice-login__login__actions">
+      {{ form.actions }}
+      {{ form.register_link }}
+    </div>
+
+    <a class="btn btn-white btn-lg" href="/user/login/google">
+      <span class="d-flex justify-content-center align-items-center">
+        <img class="avatar avatar-xss me-2" src="/themes/custom/imparables_bb5/assets/svg/brands/google-icon.svg" alt="Image Description">
+        Iniciar sesión con Google
+      </span>
+    </a>
+    <a class="btn btn-white btn-lg" href="/user/login/facebook">
+      <span class="d-flex justify-content-center align-items-center">
+        <img class="avatar avatar-xss me-2" src="/themes/custom/imparables_bb5/assets/svg/brands/facebook-icon.svg" alt="Image Description">
+        Iniciar sesión con Facebook
+      </span>
+    </a>
+
+  </div>
+</div>
+<!-- End Form -->
+
+
+
+
+{{ form|without('name', 'pass', 'actions', 'reset_password_link', 'register_link') }}
+
