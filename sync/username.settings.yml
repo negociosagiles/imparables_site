@@ -1,0 +1,72 @@
+_core:
+  default_config_hash: 4ma_ciJ4BaKjS5v-lhrHS-THRsZx_jYMz8hpOP4f72Y
+username:
+  name: name
+  mail: mail
+auto: hash
+token:
+  pattern: '[user:account-name]'
+  lowercase: 1
+  whitespace: 1
+  punctuation: 1
+selective:
+  enabled: false
+  primary: mail
+  switch: ''
+display: 0
+replace: custom
+custom: '[user:account-name]'
+phone:
+  field: false
+  verification: false
+  initial: us
+prevention: 0
+restriction:
+  enabled: 1
+  mask:
+    lowercase: 1
+    uppercase: 0
+    numeric: 1
+    space: 0
+    period: 0
+    hyphen: 0
+    underscore: 1
+    apostrophe: 0
+    sign: 0
+    minlength: '6'
+    maxlength: '20'
+options:
+  autofocus: 1
+  autocomplete: 0
+  emailmask: 1
+  capslock: 1
+  showhide: 1
+  backlink: false
+  generate: 1
+override:
+  username: 0
+  password: 0
+  login: 0
+  register: 0
+  reset: 0
+label:
+  username: 'Username or email address'
+  password: Password
+placeholder:
+  username: 'Username or email address'
+  password: 'Your password'
+description:
+  username: 'Enter your username or valid email address to login.'
+  password: 'Enter the password that accompanies your username.'
+title:
+  login: 'Log in'
+  register: 'Create new account'
+  reset: 'Reset your password'
+button:
+  login: 'Log in'
+  register: 'Create new account'
+  reset: Submit
+message:
+  login: ''
+  register: ''
+  reset: ''
