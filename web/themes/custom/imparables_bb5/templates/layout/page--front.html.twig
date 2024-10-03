@@ -67,6 +67,7 @@
  * @see html.html.twig
  */
 #}
+
 {# see https://www.drupal.org/project/drupal/issues/953034#comment-14192130 #}
 {% set sidebar_first_exists = page.sidebar_first|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
 {% set sidebar_second_exists = page.sidebar_second|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
@@ -177,12 +178,12 @@
             <ul class="navbar-nav">
  
               <li class="nav-item">
-                <a class="nav-link active" href="/">Inicio</a>
+                <a class="nav-link" href="/nosotros">Nosotros</a>
               </li>
 
               <!-- Courses -->
               <li class="hs-has-sub-menu nav-item">
-                <a id="coursesMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle" href="#" role="button" aria-expanded="false"><i class="bi-journals me-2"></i> Entrenamiento</a>
+                <a id="coursesMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">Programas</a>
 
                 <!-- Mega Menu -->
                 <div class="hs-sub-menu dropdown-menu" aria-labelledby="coursesMegaMenu" style="min-width: 42rem;">
@@ -193,14 +194,16 @@
                     <div class="row">
                       <div class="col-sm-6 col-md">
                         <span class="dropdown-header">Programas</span>
-                        <a class="dropdown-item" href="#"><i class="bi-code-slash dropdown-item-icon"></i>Programación Competitiva por niveles</a>
-                        <a class="dropdown-item" href="#"><i class="bi-laptop dropdown-item-icon"></i>Programación Teens: Secundaria</a>
-                        <a class="dropdown-item" href="#"><i class="bi-code-slash dropdown-item-icon"></i>Programación Kids: Primaria</a>
+                        <a class="dropdown-item" href="#"><i class="bi-code-slash dropdown-item-icon"></i>Pensamiento Computacional</a>
+                        <a class="dropdown-item" href="#"><i class="bi-laptop dropdown-item-icon"></i>Introducción a la Programación</a>
+                        <a class="dropdown-item" href="#"><i class="bi-code-slash dropdown-item-icon"></i>Programación Competitiva</a>
+                        <a class="dropdown-item" href="#"><i class="bi-code-slash dropdown-item-icon"></i>Tecnología e Innovación</a>
                       </div>
                       <div class="col-sm-6 col-md">
-                        <span class="dropdown-header">Cursos</span>
-                        <a class="dropdown-item" href="#"><i class="bi-code-slash dropdown-item-icon"></i>Mi Primera Olimpiada de Programación</a>
-                        <a class="dropdown-item" href="/product/1"><i class="bi-laptop dropdown-item-icon"></i>Programación Competitiva</a>                      
+                        <span class="dropdown-header">Talleres</span>
+                        <a class="dropdown-item" href="#"><i class="bi-code-slash dropdown-item-icon"></i>Olimpiadas de Programación</a>
+                        <a class="dropdown-item" href="/product/1"><i class="bi-laptop dropdown-item-icon"></i>Introducción a la Programación Competitiva</a>
+                        <a class="dropdown-item" href="/product/1"><i class="bi-laptop dropdown-item-icon"></i>Mi primera Olimpiada de Informática</a>
                       </div>
                     </div>
                     <!-- End Row -->
@@ -227,21 +230,21 @@
 
               <!-- Dropdown -->
               <li class="hs-has-sub-menu nav-item">
-                <a id="listingsDropdown" class="hs-mega-menu-invoker nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Concursos</a>
+                <a id="listingsDropdown" class="hs-mega-menu-invoker nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</a>
                 <div class="hs-sub-menu hs-position-right dropdown-menu" aria-labelledby="listingsDropdown" style="min-width: 14rem;">
-                  <a class="dropdown-item " href="../demo-course/courses.html">Olimpiadas Informática</a>
+                  <a class="dropdown-item " href="../demo-course/courses.html">Olimpiadas de Informática</a>
                   <a class="dropdown-item " href="../demo-course/course-overview.html">Olimpiadas Matemáticas</a>
-                  <a class="dropdown-item " href="../demo-course/author-profile.html">Author Profile</a>
+                  <a class="dropdown-item " href="../demo-course/author-profile.html">Cronograma de Olimpiadas</a>
                 </div>
               </li>
               <!-- End Dropdown -->
 
               <li class="nav-item">
-                <a class="nav-link acive" href="/blog">Blog</a>
+                <a class="nav-link acive" href="/blog">Novedades</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link " href="/cronograma">Cronograma</a>
+                <a class="nav-link " href="/cronograma">Contáctanos</a>
               </li>
 
             {% if not logged_in %}
@@ -257,67 +260,65 @@
               </div>
             {% endif %}
 
-              {% if logged_in %}
+            {% if logged_in %}
+              <!-- Account -->
+              <li class="hs-has-sub-menu nav-item">
+                <a id="navbarShoppingCartDropdown" class="hs-mega-menu-invoker nav-link dropdown-toggle" href="#"  role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                  >
+                  <img class="avatar avatar-xs avatar-circle" src="/themes/custom/imparables_bb5/assets/img/160x160/img9.jpg" alt="Image Description">
+                </a>
 
-
-                <!-- Account -->
-                <div class="dropdown">
-                  <a href="#" id="navbarShoppingCartDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"
-                    data-bs-dropdown-animation >
-                    <img class="avatar avatar-xs avatar-circle" src="/themes/custom/imparables_bb5/assets/img/160x160/img9.jpg" alt="Image Description">
+                <div class="hs-sub-menu hs-position-left dropdown-menu" aria-labelledby="navbarShoppingCartDropdown"
+                    style="min-width: 16rem;">
+                  <a class="d-flex align-items-center p-2" href="#">
+                    <div class="flex-shrink-0">
+                      <img class="avatar" src="/themes/custom/imparables_bb5/assets/img/160x160/img9.jpg" alt="Image Description">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <span class="d-block fw-semibold">Lida Reidy <span class="badge bg-primary ms-1">Pro</span></span>
+                      <span class="d-block text-muted small">lidareidy@gmail.com</span>
+                    </div>
                   </a>
 
-                  <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarShoppingCartDropdown"
-                      style="min-width: 16rem;">
-                    <a class="d-flex align-items-center p-2" href="#">
-                      <div class="flex-shrink-0">
-                        <img class="avatar" src="/themes/custom/imparables_bb5/assets/img/160x160/img9.jpg" alt="Image Description">
-                      </div>
-                      <div class="flex-grow-1 ms-3">
-                        <span class="d-block fw-semibold">Lida Reidy <span class="badge bg-primary ms-1">Pro</span></span>
-                        <span class="d-block text-muted small">lidareidy@gmail.com</span>
-                      </div>
-                    </a>
+                  <div class="dropdown-divider my-3"></div>
 
-                    <div class="dropdown-divider my-3"></div>
+                  <a class="dropdown-item" href="#">
+                  <span class="dropdown-item-icon">
+                    <i class="bi-chat-left-dots"></i>
+                  </span> Messages
+                  </a>
+                  <a class="dropdown-item" href="#">
+                  <span class="dropdown-item-icon">
+                    <i class="bi-wallet2"></i>
+                  </span> Purchase history
+                  </a>
+                  <a class="dropdown-item" href="/user">
+                  <span class="dropdown-item-icon">
+                    <i class="bi-person"></i>
+                  </span> Account
+                  </a>
+                  <a class="dropdown-item" href="#">
+                  <span class="dropdown-item-icon">
+                    <i class="bi-credit-card"></i>
+                  </span> Payment methods
+                  </a>
 
-                    <a class="dropdown-item" href="#">
-                    <span class="dropdown-item-icon">
-                      <i class="bi-chat-left-dots"></i>
-                    </span> Messages
-                    </a>
-                    <a class="dropdown-item" href="#">
-                    <span class="dropdown-item-icon">
-                      <i class="bi-wallet2"></i>
-                    </span> Purchase history
-                    </a>
-                    <a class="dropdown-item" href="/user">
-                    <span class="dropdown-item-icon">
-                      <i class="bi-person"></i>
-                    </span> Account
-                    </a>
-                    <a class="dropdown-item" href="#">
-                    <span class="dropdown-item-icon">
-                      <i class="bi-credit-card"></i>
-                    </span> Payment methods
-                    </a>
+                  <div class="dropdown-divider"></div>
 
-                    <div class="dropdown-divider"></div>
-
-                    <a class="dropdown-item" href="#">
-                    <span class="dropdown-item-icon">
-                      <i class="bi-question-circle"></i>
-                    </span> Help
-                    </a>
-                    <a class="dropdown-item" href="/user/logout">
-                    <span class="dropdown-item-icon">
-                      <i class="bi-box-arrow-right"></i>
-                    </span> Log out
-                    </a>
-                  </div>
+                  <a class="dropdown-item" href="#">
+                  <span class="dropdown-item-icon">
+                    <i class="bi-question-circle"></i>
+                  </span> Help
+                  </a>
+                  <a class="dropdown-item" href="/user/logout">
+                  <span class="dropdown-item-icon">
+                    <i class="bi-box-arrow-right"></i>
+                  </span> Log out
+                  </a>
                 </div>
-                <!-- End Account -->
-              {% endif %}
+              </li>
+              <!-- End Account -->
+            {% endif %}
 
             </ul>
           </div>
@@ -346,155 +347,15 @@
     {% endif %}
     <div id="main-wrapper" class="layout-main-wrapper clearfix">
 
-    <!-- Hero -->
-    <div class="position-relative">
-      <!-- Swiper Main Slider -->
-      <div class="js-swiper-shop-classic-hero swiper">
-        <div class="swiper-wrapper">
-          <!-- Slide -->
-          <div class="swiper-slide">
-            <!-- Container -->
-            <div class="container content-space-t-2">
-              <div class="row justify-content-lg-between align-items-lg-center">
-                
-                <div class="col-8 col-sm-6 col-md-5 mb-5 mb-sm-0">
-                  <img class="img-fluid" src="/themes/custom/imparables_bb5/assets/svg/illustrations/oc-growing.svg" alt="Image Description">
-                </div>
-                <!-- End Col -->
-
-                <div class="col-sm-6">
-                  <div class="mb-5">
-                    <h1 class="display-4 mb-3">
-                      Crea tu futuro hoy
-                      <br>
-                      <span class="text-primary text-highlight-warning">
-                        <span class="js-typedjs"> Holaaa </span>
-                        <!--<span class="js-typedjs"
-                              data-hs-typed-options='{
-                                "strings": ["Clases en línea", "Tutoría personalizada", "Metodología innovadora"],
-                                "typeSpeed": 90,
-                                "loop": true,
-                                "backSpeed": 30,
-                                "backDelay": 2500
-                              }'> </span>-->
-                      </span>
-                    </h1>
-                    <p class="lead">Conviértete en un innovador y lider en tecnología con nuestras clases de programación</p>
-                  </div>
-
-                  <div class="d-grid d-md-flex gap-3 align-items-md-center">
-                    <a class="btn btn-primary" href="../page-login.html">Start a free trial</a>
-
-                    <!-- Fancybox -->
-                    <a class="video-player video-player-btn" href="https://www.youtube.com/watch?v=d4eDWc8g0e0" role="button" data-fslightbox="youtube-video">
-                      <span class="video-player-icon shadow-sm me-2">
-                        <i class="bi-play-fill"></i>
-                      </span>
-                      How it works
-                    </a>
-                    <!-- End Fancybox -->
-                  </div>
-                </div>
-                <!-- End Col -->
-              </div>
-              <!-- End Row -->
-            </div>
-            <!-- End Container -->
-          </div>
-          <!-- End Slide -->
-
-          <!-- Slide -->
-          <div class="swiper-slide">
-            <!-- Container -->
-            <div class="container content-space-t-2">
-              <div class="row justify-content-lg-between align-items-lg-center mb-10">
-                <div class="col-md-6 col-lg-5">
-                  <!-- Heading -->
-                  <div class="mb-5">
-                    <h1>Build awesome apps with your web skills</h1>
-                    <p>Built on standard web technology, teams use Front to build beautiful cross-platform hybrid apps in a fraction of the time.</p>
-                  </div>
-                  <!-- End Title & Description -->
-
-                  <div class="d-grid d-sm-flex gap-3">
-                    <a class="btn btn-primary btn-transition" href="#">Get started</a>
-                    <a class="btn btn-link" href="#">Let's Talk <i class="bi-chevron-right small ms-1"></i></a>
-                  </div>
-
-                  <p class="form-text small">Start free trial. * No credit card required.</p>
-                </div>
-                <!-- End Col -->
-
-                <div class="col-sm-7 col-md-6 d-none d-md-block">
-                  <img class="img-fluid" src="/themes/custom/imparables_bb5/assets/svg/illustrations/oc-relaxing.svg" alt="Image Description">
-                </div>
-                <!-- End Col -->
-              </div>
-              <!-- End Row -->
-
-            </div>
-            <!-- End Container -->
-          </div>
-          <!-- End Slide -->
-
-          <!-- Slide -->
-          <div class="swiper-slide">
-            <!-- Container -->
-            <div class="container content-space-t-2">
-
-
-
-            </div>
-            <!-- End Container -->
-          </div>
-          <!-- End Slide -->
-        </div>
-
-        <!-- Arrows -->
-        <div class="js-swiper-shop-classic-hero-button-next swiper-button-next"></div>
-        <div class="js-swiper-shop-classic-hero-button-prev swiper-button-prev"></div>
-      </div>
-      <!-- End Swiper Main Slider -->
-
-      <!-- Swiper Thumbs Slider -->
-      <div class="position-absolute bottom-0 start-0 end-0 mb-3">
-        <div class="js-swiper-shop-hero-thumbs swiper" style="max-width: 13rem;">
-          <div class="swiper-wrapper">
-            <!-- Slide -->
-            <div class="swiper-slide">
-              <a class="js-swiper-thumb-progress swiper-thumb-progress-avatar" href="javascript:;" tabindex="0">
-                <!-- <img class="swiper-thumb-progress-avatar-img" src="/themes/custom/imparables_bb5/assets/img/160x160/img11.jpg" alt="Image Description">-->
-              </a>
-            </div>
-            <!-- End Slide -->
-
-            <!-- Slide -->
-            <div class="swiper-slide">
-              <a class="js-swiper-thumb-progress swiper-thumb-progress-avatar" href="javascript:;" tabindex="0">
-                <!-- <img class="swiper-thumb-progress-avatar-img" src="/themes/custom/imparables_bb5/assets/img/160x160/img14.jpg" alt="Image Description">-->
-              </a>
-            </div>
-            <!-- End Slide -->
-
-            <!-- Slide -->
-            <div class="swiper-slide">
-              <a class="js-swiper-thumb-progress swiper-thumb-progress-avatar" href="javascript:;" tabindex="0">
-                <!-- <img class="swiper-thumb-progress-avatar-img" src="/themes/custom/imparables_bb5/assets/img/160x160/img15.jpg" alt="Image Description">-->
-              </a>
-            </div>
-            <!-- End Slide -->
-          </div>
-        </div>
-      </div>
-      <!-- End Swiper Thumbs Slider -->
-    </div>
-    <!-- End Hero -->
-
       {% block content %}
         <div id="main" class="{{ container }}">
+        
           {{ page.breadcrumb }}
           <div class="row row-offcanvas row-offcanvas-left clearfix">
               <main{{ content_attributes }}>
+
+
+
                 <section class="section">
                   <a href="#main-content" id="main-content" tabindex="-1"></a>
                   {{ page.content }}

@@ -40,29 +40,28 @@
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
 
-      <!-- Required Meta Tags Always Come First -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-      <!-- Title -->
-      <title> Imparables.tech | Concursos de programación Escolares</title>
+    <!-- Title -->
+    <title> Radient | Concursos de programación Escolares</title>
 
-      <!-- Favicon -->
-      <link rel="shortcut icon" href="/themes/custom/imparables_bb5/assets/favicon.ico">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/themes/custom/imparables_bb5/assets/favicon.ico">
 
-      <!-- Font -->
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-      <!-- CSS Implementing Plugins -->
-      <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
-      <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
-      <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/vendor/swiper/swiper-bundle.min.css">
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+    <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/vendor/swiper/swiper-bundle.min.css">
 
 
-      <!-- CSS Front Template -->
-      <!-- <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/css/theme.min.css"> -->
-      <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/css/snippets.min.css">
-      <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/css/theme.min.css">
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/css/snippets.min.css">
+    <link rel="stylesheet" href="/themes/custom/imparables_bb5/assets/css/theme.min.css">
       
 
   </head>
@@ -325,11 +324,12 @@
 
         // INITIALIZATION OF TEXT ANIMATION (TYPING)
         // =======================================================
-        //HSCore.components.HSTyped.init('.js-typedjs')
+        HSCore.components.HSTyped.init('.js-typedjs')
 
         // INITIALIZATION OF SWIPER
         // =======================================================
-        var swiper = new Swiper('.js-swiper-course-hero',{
+        
+        var swiper2 = new Swiper('.js-swiper-course-hero',{
           preloaderClass: 'custom-swiper-lazy-preloader',
           navigation: {
             nextEl: '.js-swiper-course-hero-button-next',
@@ -356,8 +356,8 @@
             },
           },
           on: {
-            'imagesReady': function (swiper) {
-              const preloader = swiper.el.querySelector('.js-swiper-course-hero-preloader')
+            'imagesReady': function (swiper2) {
+              const preloader = swiper2.el.querySelector('.js-swiper-course-hero-preloader')
               preloader.parentNode.removeChild(preloader)
             }
           }
@@ -392,13 +392,14 @@
         var swiper = new Swiper('.js-swiper-shop-classic-hero',{
           autoplay: true,
           loop: true,
+          speed: 1000,
           navigation: {
             nextEl: '.js-swiper-shop-classic-hero-button-next',
             prevEl: '.js-swiper-shop-classic-hero-button-prev',
           },
           thumbs: {
             swiper: sliderThumbs
-          }
+          },
         });        
 
         // INITIALIZATION OF STICKY BLOCKS
