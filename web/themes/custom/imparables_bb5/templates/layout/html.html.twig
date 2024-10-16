@@ -70,8 +70,6 @@
       {{ 'Skip to main content'|t }}
     </a>
 
-
-
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
@@ -339,11 +337,11 @@
           loop: 1,
           breakpoints: {
             380: {
-              slidesPerView: 2,
+              slidesPerView: 1,
               spaceBetween: 15,
             },
             580: {
-              slidesPerView: 3,
+              slidesPerView: 1,
               spaceBetween: 15,
             },
             768: {
@@ -363,44 +361,58 @@
           }
         });
 
-        var sliderThumbs = new Swiper('.js-swiper-shop-hero-thumbs', {
-          watchSlidesVisibility: true,
-          watchSlidesProgress: true,
-          history: false,
-          slidesPerView: 3,
-          spaceBetween: 15,
-          on: {
-            beforeInit: (swiper) => {
-              const css = `.swiper-slide-thumb-active .swiper-thumb-progress .swiper-thumb-progress-path {
-                    opacity: 1;
-                    -webkit-animation: ${swiper.originalParams.autoplay.delay}ms linear 0ms forwards swiperThumbProgressDash;
-                    animation: ${swiper.originalParams.autoplay.delay}ms linear 0ms forwards swiperThumbProgressDash;
-                }`
-                style = document.createElement('style')
-              document.head.appendChild(style)
-              style.type = 'text/css'
-              style.appendChild(document.createTextNode(css));
+      // INITIALIZATION OF SWIPER
+      // =======================================================
+      function loadImage( path ) {
+        return new Promise(function (resolve) {
+          const img = new Image()
 
-              swiper.el.querySelectorAll('.js-swiper-thumb-progress')
-              .forEach(slide => {
-                slide.insertAdjacentHTML('beforeend', '<span class="swiper-thumb-progress"><svg version="1.1" viewBox="0 0 160 160"><path class="swiper-thumb-progress-path" d="M 79.98452083651917 4.000001576345426 A 76 76 0 1 1 79.89443752470656 4.0000733121155605 Z"></path></svg></span>')
+          img.addEventListener('load', () => {
+            resolve()
+          })
+
+          img.src = path.replace(/url\(\"(.*?)\"\)/g, '$1')
+        })
+      }
+
+      const $preloader = document.querySelector('.js-swiper-preloader')
+      const promises = [...document.querySelectorAll('.js-swiper-slide-preload')]
+              .map(slide => loadImage(window.getComputedStyle(slide).backgroundImage))
+
+      Promise.all(promises)
+              .then(() => {
+                $preloader.remove()
+
+                var sliderThumbs = new Swiper('.js-swiper-blog-journal-hero-thumbs', {
+                  direction: 'vertical',
+                  watchSlidesVisibility: true,
+                  watchSlidesProgress: true,
+                  slidesPerView: 3,
+                  history: false,
+                  on: {
+                    'afterInit': function (swiper) {
+                      swiper.el.style.opacity = 1
+                      swiper.el.querySelectorAll('.js-swiper-pagination-progress-body-helper')
+                              .forEach($progress => $progress.style.transitionDuration = `${swiper.params.autoplay.delay}ms`)
+                    }
+                  }
+                });
+
+                var swiper = new Swiper('.js-swiper-blog-journal-hero',{
+                  effect: 'fade',
+                  autoplay: true,
+                  loop: true,
+                  pagination: {
+                    el: '.js-swiper-blog-journal-hero-pagination',
+                    clickable: true,
+                  },
+                  thumbs: {
+                    swiper: sliderThumbs
+                  }
+                });
               })
-            },
-          },
-        });
 
-        var swiper = new Swiper('.js-swiper-shop-classic-hero',{
-          autoplay: true,
-          loop: true,
-          speed: 1000,
-          navigation: {
-            nextEl: '.js-swiper-shop-classic-hero-button-next',
-            prevEl: '.js-swiper-shop-classic-hero-button-prev',
-          },
-          thumbs: {
-            swiper: sliderThumbs
-          },
-        });        
+   
 
         // INITIALIZATION OF STICKY BLOCKS
         // =======================================================

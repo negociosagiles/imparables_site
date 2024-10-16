@@ -67,15 +67,12 @@
  * @see html.html.twig
  */
 #}
-
 {# see https://www.drupal.org/project/drupal/issues/953034#comment-14192130 #}
 {% set sidebar_first_exists = page.sidebar_first|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
 {% set sidebar_second_exists = page.sidebar_second|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
 
 <div id="page-wrapper">
-
   <div id="page">
-
 
     <!-- ========== HEADER ========== -->
     <!-- <header id="header" class="navbar navbar-expand-lg navbar-end navbar-light" -->
@@ -87,7 +84,7 @@
 
       <!-- Alert -->
       <div class="alert alert-primary text-center rounded-0 mb-0 alert-dismissible fade show" role="alert">
-        Programas para <span class="fw-semibold"><a class="link link-white" href="/nosotros">Olimpiadas de Informática / Concursos de programación</a></span>
+        Programa de entrenamiento para <span class="fw-semibold"><a class="link link-white" href="/nosotros">Olimpiadas de Informática Escolar</a></span>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
       <!-- End Alert -->
@@ -212,14 +209,14 @@
                   <div class="navbar-dropdown-menu-inner">
                     <div class="row">
                       <div class="col-sm-6 col-md" style="min-width: 10rem;">
-                        <span class="dropdown-header">Recursos</span>
-                        <a class="dropdown-item" href="/tutoriales"><i class="bi-code-slash dropdown-item-icon"></i>Tutoriales</a>
-                        <a class="dropdown-item" href="/novedades"><i class="bi-code-slash dropdown-item-icon"></i>Novedades</a>
+                        <span class="dropdown-header">Comunidad</span>
+                        <a class="dropdown-item" href="#"><i class="bi-code-slash dropdown-item-icon"></i>Comunidad</a>
+                        <a class="dropdown-item" href="#"><i class="bi-code-slash dropdown-item-icon"></i>Tutoriales</a>
                       </div>
                       <div class="col-sm-6 col-md" style="min-width: 15rem;">
-                        <span class="dropdown-header">Comunidad</span>
-                        <a class="dropdown-item" href="#"><i class="bi-code-slash dropdown-item-icon"></i>Juez en línea</a>
-                        <a class="dropdown-item" href="#"><i class="bi-laptop dropdown-item-icon"></i>Foro</a>
+                        <span class="dropdown-header">Juez en línea</span>
+                        <a class="dropdown-item" href="#"><i class="bi-code-slash dropdown-item-icon"></i>Juez</a>
+                        <a class="dropdown-item" href="#"><i class="bi-laptop dropdown-item-icon"></i>Juez</a>
                       </div>
                     </div>
                     <!-- End Row -->
@@ -233,7 +230,7 @@
               <!-- End Dropdown -->
 
               <li class="nav-item">
-                <a class="nav-link acive" href="/blog">Convenios</a>
+                <a class="nav-link acive" href="/blog">Novedades</a>
               </li>
 
             {% if not logged_in %}
@@ -319,6 +316,7 @@
     </header>
     <!-- ========== END HEADER ========== -->
 
+
     {% if page.highlighted %}
       <div class="highlighted">
         <aside class="{{ container }} section clearfix" role="complementary">
@@ -335,20 +333,89 @@
         </div>
       {% endblock %}
     {% endif %}
-    <div id="main-wrapper" class="layout-main-wrapper clearfix content-space-t-4">
+    <div id="main-wrapper" class="layout-main-wrapper clearfix content-space-t-3">
+
+
+
 
       {% block content %}
         <div id="main" class="{{ container }}">
-        
-          {{ page.breadcrumb }}
+                  {{ page.breadcrumb }}
           <div class="row row-offcanvas row-offcanvas-left clearfix">
-              <main{{ content_attributes }}>
 
+              <main{{ content_attributes }}>
                 <section class="section">
                   <a href="#main-content" id="main-content" tabindex="-1"></a>
-                  {{ page.content }}
-                </section>
+                  
+    <!-- Hero -->
+    <div class="container">
+      <div class="w-md-75 w-lg-50 text-center mx-md-auto">
+        <h1 class="display-4">Novedades</h1>
+        <p class="lead">Enterate de las últimas novedades y eventos.</p>
+      </div>
+    </div>
+    <!-- End Hero -->
 
+    <!-- Card Grid -->
+    <div class="container ">
+      <div class="row justify-content-lg-between">
+        <div class="col-lg-8 mb-10 mb-lg-0">
+          <div class="d-grid gap-7 mb-7">
+
+          {{ page.content }}
+
+          </div>
+
+        </div>
+        <!-- End Col -->
+
+        <div class="col-lg-3">
+
+          <div class="mb-7">
+            <div class="mb-3">
+              <h3>Newsletter</h3>
+            </div>
+
+            <!-- Form -->
+            <form>
+              <div class="mb-2">
+                <input type="text" class="form-control" placeholder="Enter email" aria-label="Enter email">
+              </div>
+              <div class="d-grid">
+                <button type="button" class="btn btn-primary">Subscribe</button>
+              </div>
+            </form>
+            <!-- End Form -->
+
+            <p class="form-text">Get special offers on the latest developments from Front.</p>
+          </div>
+
+
+            <div class="mb-7">
+              <div class="mb-3">
+                <h3>Tags</h3>
+              </div>
+
+              <a class="btn btn-soft-secondary btn-xs mb-1" href="#">Business</a>
+              <a class="btn btn-soft-secondary btn-xs mb-1" href="#">Adventure</a>
+              <a class="btn btn-soft-secondary btn-xs mb-1" href="#">Community</a>
+              <a class="btn btn-soft-secondary btn-xs mb-1" href="#">Announcements</a>
+              <a class="btn btn-soft-secondary btn-xs mb-1" href="#">Tutorials</a>
+              <a class="btn btn-soft-secondary btn-xs mb-1" href="#">Resources</a>
+              <a class="btn btn-soft-secondary btn-xs mb-1" href="#">Classic</a>
+              <a class="btn btn-soft-secondary btn-xs mb-1" href="#">Photography</a>
+              <a class="btn btn-soft-secondary btn-xs mb-1" href="#">Interview</a>
+            </div>
+
+
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+    <!-- End Card Grid -->
+
+                </section>
               </main>
             {% if sidebar_first_exists %}
               <div{{ sidebar_first_attributes }}>
@@ -459,6 +526,7 @@
       <!-- End Row -->
 
     </div>
+
 
       {% block footer %}
         <div class="{{ container }}">

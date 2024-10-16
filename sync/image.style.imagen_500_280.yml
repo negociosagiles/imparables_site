@@ -1,0 +1,14 @@
+uuid: 79204625-3533-4529-95b1-6d6ce6abd7da
+langcode: es
+status: true
+dependencies: {  }
+name: imagen_500_280
+label: 'Imagen 500 280'
+effects:
+  272f8074-4e5f-4aff-b80e-72f37d60a2d8:
+    uuid: 272f8074-4e5f-4aff-b80e-72f37d60a2d8
+    id: image_resize
+    weight: 1
+    data:
+      width: 500
+      height: 280

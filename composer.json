@@ -16,7 +16,9 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "drupal/addtoany": "^2.0",
         "drupal/admin_toolbar": "^3.4",
+        "drupal/better_social_sharing_buttons": "^4.0",
         "drupal/bootstrap4": "^3.0",
         "drupal/bootstrap5": "^4.0",
         "drupal/bootstrap_barrio": "^5.5",
@@ -31,6 +33,7 @@
         "drupal/multiple_registration": "^3.3",
         "drupal/nice_login": "^2.1",
         "drupal/paragraphs": "^1.17",
+        "drupal/pathauto": "^1.13",
         "drupal/remove_username": "^1.5",
         "drupal/search_api": "^1.35",
         "drupal/social_auth": "^4.1",
@@ -38,9 +41,12 @@
         "drupal/social_auth_facebook": "^4.0",
         "drupal/social_auth_google": "^4.0",
         "drupal/super_login": "^2.1",
+        "drupal/twig_tweak": "^3.4",
         "drupal/user_registrationpassword": "^2.0",
         "drupal/username": "^1.0@alpha",
-        "drupal/whatsapp": "^1.0"
+        "drupal/webform": "^6.2",
+        "drupal/whatsapp": "^1.0",
+        "drupal/whatsapp_bubble": "^1.0@beta"
     },
     "conflict": {
         "drupal/drupal": "*"

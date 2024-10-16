@@ -1,0 +1,14 @@
+uuid: e5d3dec8-09c0-4f61-9ea5-20eead73f690
+langcode: es
+status: true
+dependencies: {  }
+name: imagen_400_300
+label: 'Imagen 400 300'
+effects:
+  ce579139-5728-4711-883d-eb1300118639:
+    uuid: ce579139-5728-4711-883d-eb1300118639
+    id: image_resize
+    weight: 1
+    data:
+      width: 500
+      height: 280

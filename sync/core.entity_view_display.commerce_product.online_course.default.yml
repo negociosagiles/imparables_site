@@ -10,6 +10,7 @@ dependencies:
     - field.field.commerce_product.online_course.field_course_description
     - field.field.commerce_product.online_course.field_course_objectives
     - field.field.commerce_product.online_course.field_course_objetivos
+    - field.field.commerce_product.online_course.field_course_requirements
     - field.field.commerce_product.online_course.field_course_short_description
   module:
     - commerce_product
@@ -28,7 +29,7 @@ content:
     region: content
   field_course_description:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 4
@@ -39,6 +40,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_course_requirements:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_course_short_description:
     type: basic_string

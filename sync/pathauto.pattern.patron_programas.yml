@@ -1,0 +1,22 @@
+uuid: 22f5929b-54a0-4a72-9db2-fdee90a11903
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: patron_programas
+label: 'patron programas'
+type: 'canonical_entities:commerce_product'
+pattern: 'programas/[commerce_product:title]'
+selection_criteria:
+  25229580-2cdd-412f-9831-e9f0b36b5146:
+    id: 'entity_bundle:commerce_product'
+    negate: false
+    uuid: 25229580-2cdd-412f-9831-e9f0b36b5146
+    context_mapping:
+      commerce_product: commerce_product
+    bundles:
+      online_course: online_course
+selection_logic: and
+weight: -5
+relationships: {  }

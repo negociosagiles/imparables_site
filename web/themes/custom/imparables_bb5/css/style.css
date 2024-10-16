@@ -1,3 +1,36 @@
 .js-swiper-shop-hero-thumbs {
     display: none;
 }
+
+.navbar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-color: black !important;
+    border-bottom-width: 1px !important;
+}
+
+.alert {
+    --bs-alert-padding-y: 0.5rem !important;
+}
+
+.navbar .alert .fw-semibold a {
+    color: var(--bs-link-white) !important;
+}
+
+.navbar .alert {
+    font-size: 0.85rem !important;
+}
+
+.navbar .alert-dismissible .btn-close {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+}
+
+.wrapper-nice-login {
+    border: unset !important;
+}
+
+.node--view-mode-teaser {
+    border-bottom-width: 0 !important;
+    border-bottom: unset !important;
+}

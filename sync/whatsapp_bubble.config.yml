@@ -1,0 +1,10 @@
+_core:
+  default_config_hash: 9bJOrbUprQwN_-fxgvhQidd5gq-8YxqKWH0_X195DfE
+whatsapp_bubble:
+  alignment: right
+  valignment: bottom
+alignment: right
+valignment: bottom
+message: Escríbenos
+phone_number: '51992369740'
+is_inverse: 0

@@ -1,7 +1,14 @@
 uuid: 6151ad0f-d65f-4d34-8a40-16c4aab867d1
 langcode: es
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
 _core:
   default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
 name: Artículo
@@ -10,4 +17,4 @@ description: 'Use los <em>artículos</em> para contenido que tenga relevancia te
 help: null
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false
