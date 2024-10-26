@@ -36,6 +36,7 @@
         "drupal/pathauto": "^1.13",
         "drupal/remove_username": "^1.5",
         "drupal/search_api": "^1.35",
+        "drupal/smtp": "^1.4",
         "drupal/social_auth": "^4.1",
         "drupal/social_auth_apple": "^2.0",
         "drupal/social_auth_facebook": "^4.0",
