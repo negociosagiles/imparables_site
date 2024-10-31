@@ -1,0 +1,18 @@
+uuid: 94d4b7a6-dbc5-4439-a383-a80223d572d8
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.edades
+id: taxonomy_term.edades.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: edades
+label: Modificado
+description: 'La fecha en que el término fue creado por última vez.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

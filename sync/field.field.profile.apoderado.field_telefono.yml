@@ -1,0 +1,29 @@
+uuid: 4414534b-2516-4c42-9989-45748606b57a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_telefono
+    - profile.type.apoderado
+  module:
+    - phone_number
+    - profile
+third_party_settings:
+  profile:
+    profile_private: true
+id: profile.apoderado.field_telefono
+field_name: field_telefono
+entity_type: profile
+bundle: apoderado
+label: Teléfono
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_countries: {  }
+  allowed_types:
+    1: 1
+  extension_field: false
+field_type: phone_number

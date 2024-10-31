@@ -21,17 +21,7 @@ register_pending_approval_admin:
   body: "[user:display-name] ha solicitado una cuenta.\r\n\r\n[user:edit-url]"
 status_activated:
   subject: 'Account details for [user:display-name] at [site:name]'
-  body: |-
-    [user:display-name],
-
-    Your account at [site:name] has been activated.
-
-    You will be able to log in to [site:login-url] in the future using:
-
-    username: [user:name]
-    password: your password.
-
-    -- [site:name] team
+  body: "[user:display-name],\r\n\r\nYour account at [site:name] has been activated.\r\n\r\nYou will be able to log in to [site:login-url] in the future using:\r\n\r\nusername: [user:name]\r\npassword: your password.\r\n\r\n-- [site:name] team"
 status_blocked:
   subject: 'Detalles de la cuenta de [user:display-name] en [site:name] (bloqueada)'
   body: "[user:display-name],\r\n\r\nSu cuenta en [site:name] ha sido bloqueada.\r\n\r\n--  El equipo de [site:name]"

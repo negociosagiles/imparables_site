@@ -1,0 +1,11 @@
+uuid: 67240dba-a355-4cd8-8e9a-bb6a00e90d0d
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+id: user.apoderado
+label: Apoderado
+description: ''
+targetEntityType: user
+cache: true

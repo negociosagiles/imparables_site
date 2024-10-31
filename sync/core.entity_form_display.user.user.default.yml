@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.user.user.user_name
     - field.field.user.user.user_picture
   module:
     - user
@@ -19,17 +20,26 @@ content:
     settings: {  }
     third_party_settings: {  }
   language:
-    weight: 1
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  social_auth:
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 2
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  apoderado_profiles: true
   contact: true
   customer_profiles: true
+  estudiante_profiles: true
   langcode: true
+  path: true
+  user_name: true
   user_picture: true

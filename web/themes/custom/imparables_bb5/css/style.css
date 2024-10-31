@@ -26,6 +26,11 @@
     padding-bottom: 0.25rem !important;
 }
 
+.navbar a,
+footer a {
+    text-decoration: unset !important;
+}
+
 .wrapper-nice-login {
     border: unset !important;
 }
@@ -33,4 +38,53 @@
 .node--view-mode-teaser {
     border-bottom-width: 0 !important;
     border-bottom: unset !important;
+}
+
+form .error {
+    color: var(--bs-red) !important;
+}
+
+.form-item-estudiante-profiles-0-entity-field-telefono-0-country-code,
+.form-item-apoderado-profiles-0-entity-field-telefono-0-country-code {
+    max-width: 20% !important;
+    float: left !important;
+}
+
+.form-item-estudiante-profiles-0-entity-field-telefono-0-phone,
+.form-item-apoderado-profiles-0-entity-field-telefono-0-phone {
+    max-width: 80% !important;
+    float: left !important;
+}
+
+.field--type-phone-number label {
+    float: left !important;
+    width: 100% !important;
+}
+
+.page-user-register #edit-mail--description {
+    display: none;
+}
+
+.nice-login__register__actions {
+    width: 100% !important;
+    float: left !important;
+}
+
+
+.password-input input {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.password-input .error {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.MuiButton-containedPrimary {
+    background-color: #377dff !important;
+}
+
+footer .navbar-brand-logo {
+    max-width: 11rem !important;
 }

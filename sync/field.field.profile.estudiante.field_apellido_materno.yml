@@ -1,0 +1,24 @@
+uuid: e944fdb3-fc22-4def-8729-b19d8a43731d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_apellido_materno
+    - profile.type.estudiante
+  module:
+    - profile
+third_party_settings:
+  profile:
+    profile_private: true
+id: profile.estudiante.field_apellido_materno
+field_name: field_apellido_materno
+entity_type: profile
+bundle: estudiante
+label: 'Apellido Materno'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

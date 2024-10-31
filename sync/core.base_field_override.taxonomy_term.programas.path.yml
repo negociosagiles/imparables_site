@@ -1,0 +1,20 @@
+uuid: b6e377c3-dedf-4683-82b7-530708215d61
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.programas
+  module:
+    - path
+id: taxonomy_term.programas.path
+field_name: path
+entity_type: taxonomy_term
+bundle: programas
+label: 'Alias de URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

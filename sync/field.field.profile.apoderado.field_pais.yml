@@ -1,0 +1,22 @@
+uuid: 648c669b-5478-41a9-8310-d5fd17203d40
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_pais
+    - profile.type.apoderado
+  module:
+    - country
+id: profile.apoderado.field_pais
+field_name: field_pais
+entity_type: profile
+bundle: apoderado
+label: País
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selectable_countries: {  }
+field_type: country

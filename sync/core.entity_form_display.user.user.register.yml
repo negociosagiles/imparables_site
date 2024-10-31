@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.user.register
+    - field.field.user.user.user_name
     - field.field.user.user.user_picture
   module:
+    - profile
     - user
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
@@ -19,18 +21,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  language:
-    weight: 1
+  apoderado_profiles:
+    type: profile_form
+    weight: 90
     region: content
-    settings: {  }
-    third_party_settings: {  }
-  timezone:
-    weight: 2
-    region: content
-    settings: {  }
+    settings:
+      form_mode: default
     third_party_settings: {  }
 hidden:
   contact: true
   customer_profiles: true
+  estudiante_profiles: true
   langcode: true
+  language: true
+  path: true
+  social_auth: true
+  timezone: true
+  user_name: true
   user_picture: true

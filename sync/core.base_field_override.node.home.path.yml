@@ -1,0 +1,20 @@
+uuid: 5fe01e9c-c9b9-410b-ba3b-14e190b01c1c
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.home
+  module:
+    - path
+id: node.home.path
+field_name: path
+entity_type: node
+bundle: home
+label: 'Alias de URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

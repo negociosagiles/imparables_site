@@ -1,0 +1,22 @@
+uuid: 38a8c451-dd09-42c3-badf-3355a8550c8f
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.default
+id: commerce_product.default.status
+field_name: status
+entity_type: commerce_product
+bundle: default
+label: Publicado
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

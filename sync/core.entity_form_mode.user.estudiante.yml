@@ -1,0 +1,11 @@
+uuid: 48c46702-2cae-4b6c-881b-25aa850a7959
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+id: user.estudiante
+label: Estudiante
+description: ''
+targetEntityType: user
+cache: true

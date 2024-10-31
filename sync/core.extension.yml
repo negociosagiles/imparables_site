@@ -11,6 +11,8 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor5: 0
+  clientside_validation: 0
+  clientside_validation_jquery: 0
   comment: 0
   commerce: 0
   commerce_cart: 0
@@ -25,8 +27,10 @@ module:
   config: 0
   contact: 0
   contextual: 0
+  country: 0
   datetime: 0
   dblog: 0
+  displayname: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
@@ -53,12 +57,12 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  phone_number: 0
   profile: 0
   remove_username: 0
   search_api: 0
   search_api_db: 0
   shortcut: 0
-  smtp: 0
   social_api: 0
   social_auth: 0
   social_auth_facebook: 0
@@ -74,9 +78,11 @@ module:
   user: 0
   user_registrationpassword: 0
   username: 0
+  username_displayname: 0
   views_ui: 0
   whatsapp_bubble: 0
   pathauto: 1
+  content_translation: 10
   views: 10
   paragraphs: 11
   standard: 1000

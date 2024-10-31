@@ -1,0 +1,22 @@
+uuid: 0099fa71-78c4-4121-adf5-b50e7d25750b
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.nivel_educativo
+id: taxonomy_term.nivel_educativo.status
+field_name: status
+entity_type: taxonomy_term
+bundle: nivel_educativo
+label: Publicado
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

@@ -1,0 +1,16 @@
+uuid: 3d22b8f9-ce73-4fe0-8a92-e39cb5b2c452
+langcode: es
+status: true
+dependencies: {  }
+third_party_settings:
+  commerce_order:
+    customer_profile_type: false
+id: estudiante
+label: Estudiante
+display_label: ''
+multiple: false
+registration: false
+roles:
+  estudiante: estudiante
+allow_revisions: false
+new_revision: false

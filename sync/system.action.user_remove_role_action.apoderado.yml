@@ -1,0 +1,14 @@
+uuid: f8a1e942-c7f1-4096-98e2-8bca187bdb10
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.apoderado
+  module:
+    - user
+id: user_remove_role_action.apoderado
+label: 'Elimina el rol Apoderado al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: apoderado

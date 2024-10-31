@@ -1,0 +1,20 @@
+uuid: 24b8efae-62e1-4609-b8bb-a8c21b8f8388
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_store.commerce_store_type.imparables
+id: commerce_store.imparables.default_currency
+field_name: default_currency
+entity_type: commerce_store
+bundle: imparables
+label: 'Moneda predeterminada'
+description: 'La divisa predeterminada de la tienda.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

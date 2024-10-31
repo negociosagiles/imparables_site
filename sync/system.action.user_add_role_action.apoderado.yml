@@ -1,0 +1,14 @@
+uuid: ed3cc821-3131-4015-9d61-b1f6dcb5733d
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.apoderado
+  module:
+    - user
+id: user_add_role_action.apoderado
+label: 'Añade el rol Apoderado al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: apoderado

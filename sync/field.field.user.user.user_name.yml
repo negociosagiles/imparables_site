@@ -1,0 +1,111 @@
+uuid: 71f478f2-b607-4aa3-83c1-6c495d498875
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.user_name
+  module:
+    - displayname
+    - user
+_core:
+  default_config_hash: 6y3321VgTSk2ci3Rk1aDaPiRAW8u0a-icQQc7ykQL80
+id: user.user.user_name
+field_name: user_name
+entity_type: user
+bundle: user
+label: Nombre
+description: 'Your Full name or nickname.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  components:
+    title: false
+    first: true
+    middle: false
+    last: true
+    full: false
+    alias: false
+  minimum_components:
+    title: false
+    first: true
+    middle: false
+    last: false
+    full: false
+    alias: false
+  max_length:
+    title: 31
+    first: 63
+    middle: 127
+    last: 63
+    full: 255
+    alias: 255
+  labels:
+    title: Título
+    first: 'First name'
+    middle: 'Middle name(s)'
+    last: 'Last name'
+    full: 'Full name'
+    alias: Nickname
+  allow_last_or_first: false
+  autocomplete_source:
+    title:
+      - title
+    first: {  }
+    middle: {  }
+    last: {  }
+    full: {  }
+    alias: {  }
+  autocomplete_separator:
+    title: ' '
+    first: ' -'
+    middle: ' -'
+    last: ' -'
+    full: ' '
+    alias: ', '
+  title_options:
+    - '-- --'
+    - Mr.
+    - Mrs.
+    - Miss
+    - Ms.
+    - Dr.
+    - Prof.
+  sort_options:
+    title: false
+    first: false
+    middle: false
+    last: false
+    full: false
+    alias: false
+  widget_layout: inline
+  field_title_display: none
+  show_component_required_marker: true
+  override_format: default
+  field_type:
+    title: select
+    first: text
+    middle: text
+    last: text
+    full: text
+    alias: text
+  size:
+    title: 6
+    first: 20
+    middle: 20
+    last: 20
+    full: 35
+    alias: 35
+  title_display:
+    title: title
+    first: title
+    middle: title
+    last: title
+    full: title
+    alias: title
+  preferred_field_reference: ''
+  preferred_field_reference_separator: ', '
+  alternative_field_reference: ''
+  alternative_field_reference_separator: ', '
+field_type: display_name

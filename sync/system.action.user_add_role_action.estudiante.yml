@@ -1,0 +1,14 @@
+uuid: 8b0e301b-2d14-4e30-842c-fb29015bef93
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.estudiante
+  module:
+    - user
+id: user_add_role_action.estudiante
+label: 'Añade el rol Estudiante al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: estudiante

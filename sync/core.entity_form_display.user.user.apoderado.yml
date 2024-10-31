@@ -1,0 +1,41 @@
+uuid: 862b43b3-9ea4-4fbd-a6f9-2ef318bab8e7
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.apoderado
+    - field.field.user.user.user_name
+    - field.field.user.user.user_picture
+  module:
+    - profile
+    - user
+_core:
+  default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
+id: user.user.apoderado
+targetEntityType: user
+bundle: user
+mode: apoderado
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  apoderado_profiles:
+    type: profile_form
+    weight: 1
+    region: content
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+hidden:
+  contact: true
+  customer_profiles: true
+  estudiante_profiles: true
+  langcode: true
+  language: true
+  path: true
+  social_auth: true
+  timezone: true
+  user_name: true
+  user_picture: true

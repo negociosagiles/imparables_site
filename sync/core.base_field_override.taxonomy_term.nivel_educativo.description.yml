@@ -1,0 +1,21 @@
+uuid: 4305228e-0ed4-4428-aa94-365ddf8efa2e
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.nivel_educativo
+  module:
+    - text
+id: taxonomy_term.nivel_educativo.description
+field_name: description
+entity_type: taxonomy_term
+bundle: nivel_educativo
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

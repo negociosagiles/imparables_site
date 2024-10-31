@@ -1,0 +1,20 @@
+uuid: 737b9541-802d-4b83-a3ae-efc072861b49
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.nivel_educativo
+  module:
+    - path
+id: taxonomy_term.nivel_educativo.path
+field_name: path
+entity_type: taxonomy_term
+bundle: nivel_educativo
+label: 'Alias de URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

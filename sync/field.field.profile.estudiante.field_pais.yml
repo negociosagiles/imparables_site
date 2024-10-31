@@ -1,0 +1,22 @@
+uuid: dc94a7cf-ecbe-4dc7-b8da-d5ab1346bc6a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_pais
+    - profile.type.estudiante
+  module:
+    - country
+id: profile.estudiante.field_pais
+field_name: field_pais
+entity_type: profile
+bundle: estudiante
+label: País
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selectable_countries: {  }
+field_type: country

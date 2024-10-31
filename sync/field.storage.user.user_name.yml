@@ -1,0 +1,21 @@
+uuid: f19b5b61-07a3-47bd-a1b2-cbc5876bdea5
+langcode: en
+status: true
+dependencies:
+  module:
+    - displayname
+    - user
+_core:
+  default_config_hash: V86tbBshPMltBzmc8wM2SvLMSUBd1bdwhAtg7JWtXHs
+id: user.user_name
+field_name: user_name
+entity_type: user
+type: display_name
+settings: {  }
+module: displayname
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

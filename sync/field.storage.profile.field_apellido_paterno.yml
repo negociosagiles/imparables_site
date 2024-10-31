@@ -1,0 +1,21 @@
+uuid: 4367894f-dc0c-4868-9f2d-16eb7eef353e
+langcode: es
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_apellido_paterno
+field_name: field_apellido_paterno
+entity_type: profile
+type: string
+settings:
+  max_length: 40
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

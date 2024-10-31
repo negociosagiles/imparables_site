@@ -1,0 +1,21 @@
+uuid: 52977a1d-8b03-4120-92dc-587e648c9fa1
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.edades
+  module:
+    - text
+id: taxonomy_term.edades.description
+field_name: description
+entity_type: taxonomy_term
+bundle: edades
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

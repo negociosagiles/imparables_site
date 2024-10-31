@@ -1,0 +1,22 @@
+uuid: a6ff4020-33d1-4e5e-b9b8-b056ae3b6e00
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.programas
+id: taxonomy_term.programas.status
+field_name: status
+entity_type: taxonomy_term
+bundle: programas
+label: Publicado
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

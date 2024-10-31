@@ -1,0 +1,22 @@
+uuid: 546813dc-0f79-478b-b1b6-38e0b883ea65
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.online_course
+id: commerce_product_variation.online_course.status
+field_name: status
+entity_type: commerce_product_variation
+bundle: online_course
+label: Publicado
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

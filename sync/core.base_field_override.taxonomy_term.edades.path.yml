@@ -1,0 +1,20 @@
+uuid: de0efdea-c18b-4b12-b834-2cc8edaaf197
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.edades
+  module:
+    - path
+id: taxonomy_term.edades.path
+field_name: path
+entity_type: taxonomy_term
+bundle: edades
+label: 'Alias de URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

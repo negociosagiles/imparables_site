@@ -1,0 +1,84 @@
+estudiante:
+  estudiante:
+    estudiante:
+      estudiante:
+        path: /registro/estudiante
+        url: /user/register/estudiante
+        redirect_path: ''
+        hidden: 0
+        form_mode_register: register
+        form_mode_edit: default
+      path: /registro/estudiante
+      url: /user/register/estudiante
+      redirect_path: ''
+      hidden: 1
+      form_mode_register: register
+      form_mode_edit: default
+    path: /registro/estudiante
+    url: /user/register/estudiante
+    redirect_path: ''
+    hidden: 1
+    form_mode_register: estudiante
+    form_mode_edit: default
+  apoderado:
+    estudiante:
+      estudiante:
+        estudiante:
+          path: /registro/estudiante
+          url: /user/register/estudiante
+          redirect_path: ''
+          hidden: 0
+          form_mode_register: register
+          form_mode_edit: default
+        path: /registro/estudiante
+        url: /user/register/estudiante
+        redirect_path: ''
+        hidden: 1
+        form_mode_register: register
+        form_mode_edit: default
+      path: /registro/estudiante
+      url: /user/register/estudiante
+      redirect_path: ''
+      hidden: 1
+      form_mode_register: estudiante
+      form_mode_edit: default
+    path: /registro/apoderado
+    url: /user/register/apoderado
+    redirect_path: ''
+    hidden: 1
+    form_mode_register: apoderado
+    form_mode_edit: default
+  path: /registro/estudiante
+  url: /user/register/estudiante
+  redirect_path: ''
+  hidden: 1
+  form_mode_register: estudiante
+  form_mode_edit: default
+apoderado:
+  estudiante:
+    estudiante:
+      estudiante:
+        path: /registro/estudiante
+        url: /user/register/estudiante
+        redirect_path: ''
+        hidden: 0
+        form_mode_register: register
+        form_mode_edit: default
+      path: /registro/estudiante
+      url: /user/register/estudiante
+      redirect_path: ''
+      hidden: 1
+      form_mode_register: register
+      form_mode_edit: default
+    path: /registro/estudiante
+    url: /user/register/estudiante
+    redirect_path: ''
+    hidden: 1
+    form_mode_register: estudiante
+    form_mode_edit: default
+  path: /registro/apoderado
+  url: /user/register/apoderado
+  redirect_path: ''
+  hidden: 1
+  form_mode_register: apoderado
+  form_mode_edit: default

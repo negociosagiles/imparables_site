@@ -1,0 +1,16 @@
+uuid: b6cab3de-5992-4eb9-863c-ab8ee10634d7
+langcode: es
+status: true
+dependencies: {  }
+third_party_settings:
+  commerce_order:
+    customer_profile_type: false
+id: apoderado
+label: Apoderado
+display_label: ''
+multiple: false
+registration: true
+roles:
+  apoderado: apoderado
+allow_revisions: false
+new_revision: false

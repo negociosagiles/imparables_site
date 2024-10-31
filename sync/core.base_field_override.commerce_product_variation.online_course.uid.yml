@@ -1,0 +1,20 @@
+uuid: acf1db56-99b2-402c-a2a1-515fd870d1b9
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.online_course
+id: commerce_product_variation.online_course.uid
+field_name: uid
+entity_type: commerce_product_variation
+bundle: online_course
+label: Autor
+description: 'Autor de la variación.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\commerce_product\Entity\ProductVariation::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

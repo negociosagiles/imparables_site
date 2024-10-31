@@ -3,6 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
+    - field.field.user.user.user_name
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -30,4 +31,10 @@ content:
     weight: 0
     region: content
 hidden:
+  apoderado_profiles: true
+  customer_profiles: true
+  displayname: true
+  estudiante_profiles: true
   langcode: true
+  search_api_excerpt: true
+  user_name: true

@@ -1,0 +1,41 @@
+uuid: 3d9241ca-6083-48e0-9c3d-fdb2a40cdf54
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.estudiante
+    - field.field.user.user.user_name
+    - field.field.user.user.user_picture
+  module:
+    - profile
+    - user
+_core:
+  default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
+id: user.user.estudiante
+targetEntityType: user
+bundle: user
+mode: estudiante
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  estudiante_profiles:
+    type: profile_form
+    weight: 1
+    region: content
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+hidden:
+  apoderado_profiles: true
+  contact: true
+  customer_profiles: true
+  langcode: true
+  language: true
+  path: true
+  social_auth: true
+  timezone: true
+  user_name: true
+  user_picture: true

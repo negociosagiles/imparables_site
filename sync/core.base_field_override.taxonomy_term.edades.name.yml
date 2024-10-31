@@ -1,0 +1,18 @@
+uuid: ecb02097-61d2-417e-9d15-3d78814d782a
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.edades
+id: taxonomy_term.edades.name
+field_name: name
+entity_type: taxonomy_term
+bundle: edades
+label: Nombre
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: b8eb01ac-2315-4071-9a08-1def4ffde135
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.programas
+  module:
+    - text
+id: taxonomy_term.programas.description
+field_name: description
+entity_type: taxonomy_term
+bundle: programas
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

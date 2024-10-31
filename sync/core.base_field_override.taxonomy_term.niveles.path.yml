@@ -1,0 +1,20 @@
+uuid: ca475e1a-40fe-4241-a684-aba0b0be1b28
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.niveles
+  module:
+    - path
+id: taxonomy_term.niveles.path
+field_name: path
+entity_type: taxonomy_term
+bundle: niveles
+label: 'Alias de URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,60 @@
+uuid: 84c27810-f008-4396-8f30-c24f17baedee
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.profile.estudiante.field_apellido_materno
+    - field.field.profile.estudiante.field_apellido_paterno
+    - field.field.profile.estudiante.field_nombres
+    - field.field.profile.estudiante.field_pais
+    - field.field.profile.estudiante.field_telefono
+    - profile.type.estudiante
+  module:
+    - country
+    - phone_number
+id: profile.estudiante.default
+targetEntityType: profile
+bundle: estudiante
+mode: default
+content:
+  field_apellido_materno:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_apellido_paterno:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_nombres:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_pais:
+    type: country_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_telefono:
+    type: phone_number_international
+    label: above
+    settings:
+      as_link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  search_api_excerpt: true

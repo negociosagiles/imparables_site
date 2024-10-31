@@ -1,0 +1,24 @@
+uuid: 7027b6b3-6550-4be9-b92c-b9293cbd675b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_nombres
+    - profile.type.estudiante
+  module:
+    - profile
+third_party_settings:
+  profile:
+    profile_private: true
+id: profile.estudiante.field_nombres
+field_name: field_nombres
+entity_type: profile
+bundle: estudiante
+label: Nombres
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: e70f04f9-0720-45ff-ac07-ff4dcfaa9dc7
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.niveles
+  module:
+    - text
+id: taxonomy_term.niveles.description
+field_name: description
+entity_type: taxonomy_term
+bundle: niveles
+label: Descripción
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,24 @@
+uuid: 7d8d27ed-c6aa-49da-a913-cef8a92bcbda
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_nombres
+    - profile.type.apoderado
+  module:
+    - profile
+third_party_settings:
+  profile:
+    profile_private: true
+id: profile.apoderado.field_nombres
+field_name: field_nombres
+entity_type: profile
+bundle: apoderado
+label: Nombres
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

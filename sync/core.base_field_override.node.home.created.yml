@@ -1,0 +1,18 @@
+uuid: b3d3b887-e518-4894-ad2d-0370c5e24902
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.home
+id: node.home.created
+field_name: created
+entity_type: node
+bundle: home
+label: 'Fecha de autoría'
+description: 'The date and time that the content was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

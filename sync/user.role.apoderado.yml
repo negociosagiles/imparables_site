@@ -1,0 +1,9 @@
+uuid: 8c33c2e1-e647-4c0f-a4d8-07bfae6e4887
+langcode: es
+status: true
+dependencies: {  }
+id: apoderado
+label: Apoderado
+weight: 5
+is_admin: null
+permissions: {  }

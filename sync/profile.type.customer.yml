@@ -13,7 +13,7 @@ _core:
 id: customer
 label: Cliente
 display_label: 'Datos del cliente'
-multiple: true
+multiple: false
 registration: false
 roles: {  }
 allow_revisions: false

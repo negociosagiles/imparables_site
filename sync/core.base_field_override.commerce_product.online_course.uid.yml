@@ -1,0 +1,20 @@
+uuid: 9cec7449-18e0-44b2-aaf2-d8468b1b6bdc
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.online_course
+id: commerce_product.online_course.uid
+field_name: uid
+entity_type: commerce_product
+bundle: online_course
+label: Autor
+description: 'Autor del producto.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\commerce_product\Entity\Product::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference
