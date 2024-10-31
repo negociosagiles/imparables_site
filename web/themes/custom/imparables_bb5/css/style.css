@@ -44,6 +44,32 @@ footer a {
 
 form .error {
     color: var(--bs-red) !important;
+    font-size: 0.85rem !important;
+}
+
+
+.field--name-field-nombres {
+    width: 50% !important;
+    float: left;
+}
+
+.field--name-field-apellido-paterno {
+    width: 50% !important;
+    float: left;
+}
+
+.field--name-field-apellido-materno {
+    width: 50% !important;
+    float: left;
+}
+
+.field--name-field-pais {
+    width: 50% !important;
+    float: left;
+}
+
+.hs-nav-scroller-horizontal .nav .nav-link {
+    font-size: 0.95rem !important;
 }
 
 .form-item-estudiante-profiles-0-entity-field-telefono-0-country-code,
@@ -78,7 +104,6 @@ form .error {
 
 .nice-login__register__actions {
     width: 100% !important;
-    float: left !important;
 }
 
 
@@ -87,9 +112,20 @@ form .error {
     max-width: 100% !important;
 }
 
-.password-input .error {
+.password-input .form-element--type-password {
     width: 100% !important;
     max-width: 100% !important;
+}
+
+.password-input input[type='password'] {
+    width: 100% !important;
+    max-width: 100% !important;
+    float: left;
+}
+
+#edit-pass-error {
+    width: 100% !important;
+    float: left;
 }
 
 .MuiButton-containedPrimary {
@@ -101,6 +137,31 @@ footer .navbar-brand-logo {
 }
 
 #edit-apoderado-profiles-wrapper details summary,
-#edit-estudiante-profiles-wrapper details summary {
+#edit-estudiante-profiles-wrapper details summary,
+#edit-language summary,
+#edit-timezone summary {
     display: none !important;
+}
+
+.nice-login__login__actions .mb-3,
+.nice-login__register__actions .mb-3,
+.nice-login__pass__actions .mb-3 {
+    width: 100%;
+    margin-top: 0.5rem !important;
+}
+
+.nice-login__login__actions button,
+.nice-login__register__actions button,
+.nice-login__pass__actions button {
+    width: 100%;
+}
+
+.details-wrapper .mb-3 {
+    margin-bottom: 0.3rem !important;
+}
+
+.placeholder {
+    cursor: none !important;
+    background-color: unset !important;
+    opacity: 1 !important;
 }

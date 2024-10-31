@@ -26,7 +26,6 @@
 
     {{ form.name }}
 
-
     <div class="nice-login__login__pass">
       {{ form.pass }}
       {{ form.reset_password_link }}
@@ -36,12 +35,6 @@
       {{ form.actions }}
     </div>
 
-    <a class="btn btn-white btn-lg" href="/user/login/google">
-      <span class="d-flex justify-content-center align-items-center">
-        <img class="avatar avatar-xss me-2" src="/themes/custom/imparables_bb5/assets/svg/brands/google-icon.svg" alt="Image Description">
-        Iniciar sesión con Google
-      </span>
-    </a>
     <!--
     <a class="btn btn-white btn-lg" href="/user/login/facebook">
       <span class="d-flex justify-content-center align-items-center">
@@ -49,11 +42,22 @@
         Iniciar sesión con Facebook
       </span>
     </a>-->
-    <div class="text-center">
-                <p>¿No te has registrado aún? <a class="link" href="/registro/estudiante">Regístrate aquí</a></p>
-              </div>
+
+    <div class="text-center d-grid gap-3">
+          <span class="divider-center">O</span>
+
+      <a class="btn btn-white btn-lg" href="/user/login/google">
+        <span class="d-flex justify-content-center align-items-center">
+          <img class="avatar avatar-xss me-2" src="/themes/custom/imparables_bb5/assets/svg/brands/google-icon.svg" alt="Image Description">
+          Iniciar sesión con Google
+        </span>
+      </a>
+      <p>¿No te has registrado aún? <a class="link" href="/registro/estudiante">Regístrate aquí</a></p>
+    </div>
 
   </div>
+
+
 </div>
 <!-- End Form -->
 
