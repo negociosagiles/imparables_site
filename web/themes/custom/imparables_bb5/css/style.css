@@ -52,6 +52,10 @@ form .error {
     float: left !important;
 }
 
+.phone-number-field .country-select .arrow {
+    display: none;
+}
+
 .form-item-estudiante-profiles-0-entity-field-telefono-0-phone,
 .form-item-apoderado-profiles-0-entity-field-telefono-0-phone {
     max-width: 80% !important;
@@ -93,4 +97,9 @@ form .error {
 
 footer .navbar-brand-logo {
     max-width: 11rem !important;
+}
+
+#edit-apoderado-profiles-wrapper details summary,
+#edit-estudiante-profiles-wrapper details summary {
+    display: none !important;
 }

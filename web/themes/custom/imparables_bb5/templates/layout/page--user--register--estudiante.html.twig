@@ -93,43 +93,46 @@
         </div>
       {% endblock %}
     {% endif %}
-    <div id="main-wrapper" class="layout-main-wrapper clearfix content-space-t-3">
+    <div id="main-wrapper" class="layout-main-wrapper clearfix content-space-t-4">
       {% block content %}
         <div id="main" class="{{ container }}">
           <!-- aqui iba el breadcrumb -->
           <div class="row row-offcanvas row-offcanvas-left clearfix">
+
 
               <main{{ content_attributes }}>
                 <section class="section">
                   {# page.breadcrumb #}
                   <a href="#main-content" id="main-content" tabindex="-1"></a>
 
-<div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-        
-              </div>
-                <div class="text-center flex-grow-1 mx-auto" style="max-width: 28rem;">
-                <label class="">Registrarme como:</label>
-                </div>
+                  <div class="container">
+                    <div class="flex-grow-1 mx-auto" style="max-width: 28rem;">
+                      <!-- Heading -->
+                      <div class="text-center mb-5 mb-md-5">
+                        <h1 class="h2">Registro de Estudiante</h1>
+                        <p>Ingresa tus datos para poder crear tu cuenta.</p>
+                      </div>
+                      <!-- End Heading -->
+                    </div>
+                  </div>
 
-<div class="js-nav-scroller hs-nav-scroller-horizontal">
+                  <div class="js-nav-scroller hs-nav-scroller-horizontal">
+                    <!-- Nav -->
+                    <ul class="nav nav-segment nav-pills nav-fill mx-auto mb-5" id="featuresEg1Tab" role="" style="max-width: 30rem;">
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link active" href="/registro/estudiante" id="featuresEg1One-tab"   role="tab" aria-controls="featuresEg1One" aria-selected="true">Estudiante</a>
+                      </li>
 
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="/registro/apoderado" id="featuresEg1Two-tab"   role="tab" aria-controls="featuresEg1Two" aria-selected="false" tabindex="-1">Padre o Apoderado</a>
+                      </li>
 
-                <!-- Nav -->
-                <ul class="nav nav-segment nav-pills nav-fill mx-auto mb-7" id="featuresEg1Tab" role="" style="max-width: 30rem;">
-                  <li class="nav-item" role="presentation">
-                    <a class="nav-link active" href="/registro/estudiante" id="featuresEg1One-tab"   role="tab" aria-controls="featuresEg1One" aria-selected="true">Estudiante</a>
-                  </li>
-
-                  <li class="nav-item" role="presentation">
-                    <a class="nav-link" href="/registro/apoderado" id="featuresEg1Two-tab"   role="tab" aria-controls="featuresEg1Two" aria-selected="false" tabindex="-1">Padre o Apoderado</a>
-                  </li>
-
-                  <li class="nav-item" role="presentation">
-                    <a class="nav-link" href="#featuresThree" id="featuresEg1Three-tab"   role="tab" aria-controls="featuresEg1Three" aria-selected="false" tabindex="-1">Institución Educativa</a>
-                  </li>
-                </ul>
-                <!-- End Nav -->
-              </div>
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="#featuresThree" id="featuresEg1Three-tab"   role="tab" aria-controls="featuresEg1Three" aria-selected="false" tabindex="-1">Institución Educativa</a>
+                      </li>
+                    </ul>
+                    <!-- End Nav -->
+                  </div>
 
                   {{ page.content }}
 
