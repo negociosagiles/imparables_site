@@ -48,13 +48,13 @@ form .error {
 
 .form-item-estudiante-profiles-0-entity-field-telefono-0-country-code,
 .form-item-apoderado-profiles-0-entity-field-telefono-0-country-code {
-    max-width: 25% !important;
+    max-width: 30% !important;
     float: left;
 }
 
 .form-item-estudiante-profiles-0-entity-field-telefono-0-phone,
 .form-item-apoderado-profiles-0-entity-field-telefono-0-phone {
-    max-width: 75% !important;
+    max-width: 70% !important;
     float: left;
 }
 
