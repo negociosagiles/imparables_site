@@ -34,7 +34,6 @@
 
     <div class="nice-login__login__actions">
       {{ form.actions }}
-      {{ form.register_link }}
     </div>
 
     <a class="btn btn-white btn-lg" href="/user/login/google">
@@ -57,4 +56,6 @@
 
 
 {{ form|without('name', 'pass', 'actions', 'reset_password_link', 'register_link') }}
+
+
 

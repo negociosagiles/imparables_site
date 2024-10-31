@@ -58,9 +58,13 @@ form .error {
     float: left !important;
 }
 
+.form-item-apoderado-profiles-0-entity-field-telefono-0-country-code label {
+    max-width: 100% !important;
+    width: 100px !important;
+}
+
 .field--type-phone-number label {
     float: left !important;
-    width: 100% !important;
 }
 
 .page-user-register #edit-mail--description {
