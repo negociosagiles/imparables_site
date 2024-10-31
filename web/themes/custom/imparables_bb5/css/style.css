@@ -69,6 +69,7 @@ form .error {
 
 .field--type-phone-number label {
     float: left !important;
+    width: 100% !important;
 }
 
 .page-user-register #edit-mail--description {
