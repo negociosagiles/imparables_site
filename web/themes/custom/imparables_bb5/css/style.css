@@ -48,28 +48,28 @@ form .error {
 
 .form-item-estudiante-profiles-0-entity-field-telefono-0-country-code,
 .form-item-apoderado-profiles-0-entity-field-telefono-0-country-code {
-    max-width: 20% !important;
-    float: left !important;
-}
-
-.phone-number-field .country-select .arrow {
-    display: none;
+    max-width: 25% !important;
+    float: left;
 }
 
 .form-item-estudiante-profiles-0-entity-field-telefono-0-phone,
 .form-item-apoderado-profiles-0-entity-field-telefono-0-phone {
-    max-width: 80% !important;
-    float: left !important;
+    max-width: 75% !important;
+    float: left;
 }
 
 .form-item-apoderado-profiles-0-entity-field-telefono-0-country-code label {
-    max-width: 100% !important;
-    width: 100px !important;
+    display: none;
 }
 
-.field--type-phone-number label {
-    float: left !important;
+.field--type-phone-number label[for="edit-estudiante-profiles-0-entity-field-telefono-0-label"],
+.field--type-phone-number label[for="edit-apoderado-profiles-0-entity-field-telefono-0-label"] {
+    max-width: 100% !important;
     width: 100% !important;
+}
+
+.phone-number-field .country-select .arrow {
+    display: none;
 }
 
 .page-user-register #edit-mail--description {
